@@ -169,6 +169,7 @@ return [
          */
         HttpOz\Roles\RolesServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
+        HttpOz\Roles\RolesServiceProvider::class,
 
         /*
          * Application Service Providers...
