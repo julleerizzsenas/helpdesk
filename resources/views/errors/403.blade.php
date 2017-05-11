@@ -1,3 +1,6 @@
+@extends('layouts.login_master')
+@section('title' ,  'Error')
+@section('content')
 <div class="container body">
   <div class="main_container">
     <!-- page content -->
@@ -27,3 +30,4 @@
     <!-- /page content -->
   </div>
 </div>
+@endsection
