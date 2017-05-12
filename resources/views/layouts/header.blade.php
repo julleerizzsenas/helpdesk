@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -18,6 +18,4 @@
 
     <!-- Custom Theme Style -->
     <link href="css/custom.min.css" rel="stylesheet">
-
-  </head>
-
+</head>
