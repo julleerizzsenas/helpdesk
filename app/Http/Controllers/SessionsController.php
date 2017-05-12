@@ -18,7 +18,7 @@ class SessionsController extends Controller
 
     public function index()
     {
-        return view('layouts.index');
+        return view('layouts.master');
     }
 
     public function store(Request $request)
