@@ -16,6 +16,11 @@ class SessionsController extends Controller
     	return view('sessions.login');
     }
 
+    public function index()
+    {
+        return view('layouts.index');
+    }
+
     public function store(Request $request)
     {	
         if (! auth()->attempt(request(['email','password']))) 
@@ -36,8 +41,6 @@ class SessionsController extends Controller
     {
     	auth()->logout();
 
-        return redirect('welcome');
-    	
-    	
+        return redirect()->home();
     }    
 }

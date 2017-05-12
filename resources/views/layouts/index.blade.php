@@ -36,10 +36,14 @@
 
       <!-- page content -->
       <div class="right_col" role="main">
-      <div class="row tile_count">
-          @include('layouts.content')
+        <div class="row tile_count">
+          <div class="jumbotron text-center">
+            <h1>Welcome!</h1>
+          </div>
         </div>
+        <!-- /top tiles -->
+        <br />
       </div>
-      <!-- /page content -->
-
+    </div>
+    <!-- /page content -->
 @endsection
