@@ -34,10 +34,11 @@
                 <div class="clearfix"></div>
                 <br />
 
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                 <div>
+                  <h1><i class="fa fa-paw"></i> Help Desk!</h1>
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
+              </div>
               </div>
             </form>
           </section>
@@ -75,7 +76,7 @@
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>
-      @include ('layouts.errors')
+              @include ('layouts.errors')
 
             </form>
           </section>
