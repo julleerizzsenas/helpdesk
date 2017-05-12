@@ -16,8 +16,9 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'SessionsController@index')->name('home');
-Route::get('login', 'SessionsController@create');
-Route::post('login', 'SessionsController@store');
-Route::get('logout', 'SessionsController@destroy');
+//Route::get('/', 'SessionsController@index')->name('home');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
