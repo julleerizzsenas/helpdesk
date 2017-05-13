@@ -16,7 +16,7 @@
 //     return view('welcome');
 // });
 
-//Route::get('/', 'SessionsController@index')->name('home');
+Route::get('/', 'SessionsController@index')->name('home');
 
 
 Auth::routes();
