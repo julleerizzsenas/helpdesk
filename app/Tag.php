@@ -4,16 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tags extends Model
+class Tag extends Model
 {
-    protected $table = "tags";
-
-    protected $fillable = [ 'post_id' , 
-    						'name',
-    						'user',
-
-    ];
-
     public $timestamps = false;
 
     public function getPosts()

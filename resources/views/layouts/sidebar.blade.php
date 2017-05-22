@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 
 <!-- menu profile quick info -->
-{{-- <div class="profile clearfix">
+<div class="profile clearfix">
   <div class="profile_pic">
     <img src="images/download.png" alt="..." class="img-circle profile_img">
   </div>
@@ -9,7 +9,7 @@
     <span>Welcome,</span>
     <h2> {{ Auth::user()['firstname']. "  " .Auth::user()['lastname'] }}</h2>
   </div>
-</div> --}}
+</div>
 <!-- /menu profile quick info -->
 
 <br />
@@ -26,8 +26,12 @@
           <a href="/create">
             <i class="fa fa-edit"></i>Add Topic</a>
           </li>
-        </ul>
+          <li>
+            <a href="/posts">
+              <i class="fa fa-file-text"></i>Topics</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <!-- /sidebar menu -->
+      <!-- /sidebar menu -->
 

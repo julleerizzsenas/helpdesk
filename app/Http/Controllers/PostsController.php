@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-use App\Tags;
-use App\Posts;
+use App\Tag;
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -16,7 +16,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view('layouts.dashboard');
+        
     }
 
     /**
@@ -26,7 +26,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('layouts.create');
+        return view('pages.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Posts::create([
+        $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
                                 'user' => auth()->user()->id,
@@ -47,7 +47,7 @@ class PostsController extends Controller
 
         if($post)
         {
-            $tags = Tags::create([
+            $tag = Tag::create([
                                 'post_id' => $post->id,
                                 'name' => $request->get('tags'),
                                 'user' => auth()->user()->id
@@ -57,7 +57,7 @@ class PostsController extends Controller
 
             //$tags = false;
 
-            if($tags) 
+            if($tag) 
             {
                 session()->flash(
                     'message', 'Your post has now been published.');
@@ -88,9 +88,12 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(Posts $posts)
+    public function show(Post $post)
     {
-        //
+        
+        //$post = Post::find(22);
+        //dd($post);
+        return view('pages.show');
     }
 
     /**
@@ -99,7 +102,7 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function edit(Posts $posts)
+    public function edit(Post $post)
     {
         //
     }
@@ -111,7 +114,7 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Posts $posts)
+    public function update(Request $request, Post $post)
     {
         //
     }
@@ -122,7 +125,7 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Posts $posts)
+    public function destroy(Post $post)
     {
         //
     }
