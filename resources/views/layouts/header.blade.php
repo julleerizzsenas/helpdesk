@@ -17,5 +17,5 @@
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>

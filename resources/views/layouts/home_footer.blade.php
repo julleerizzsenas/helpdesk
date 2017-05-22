@@ -1,12 +1,16 @@
 <footer>
-	<div class="pull-right">
-		Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-	</div>
-	<div class="clearfix"></div>
+
+    <ul class="nav-justified">
+        <li><a href="issuetracker">About Knowledge Base</a></li>
+        <li><a href="helpdesk">Team</a></li>
+        <li><a href="about">Location</a></li>
+        <li><a href="contact">Contact Us</a></li>
+    </ul>
+    <div class="clearfix"></div>
 </footer>
+</div>
+</div>
 <!-- /footer content -->
-</div>
-</div>
 
 <!-- jQuery -->
 <script src="vendors/jquery/dist/jquery.min.js"></script>

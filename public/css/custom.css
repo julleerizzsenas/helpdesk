@@ -631,8 +631,8 @@ table.no-margin .progress {
     padding-left: 10px
 }
 .row {
-    margin-right: -10px;
-    margin-left: -10px
+    margin-right: 0px;
+    margin-left: 0px
 }
 .grid_slider .col-md-6 {
     padding: 0 40px
@@ -4242,3 +4242,21 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .dataTables_wrapper > .row{
   overflow:auto !important; /*prevent datatables overflowing its container*/
 }
+
+.upper {
+    text-transform: uppercase;
+}
+
+footer {
+    margin-left:0;
+}
+
+.a {
+    border:solid 1px red;
+}
+
+
+
+
+
+
