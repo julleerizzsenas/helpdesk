@@ -16,7 +16,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/create', 'PostsController@create');
+Route::post('/store', 'PostsController@store');
+Route::get('/dashboard', 'PostsController@index');
+
+
+//Route::resource('create', 'PostsController');
+//Route::resource('dashboard', 'PostsController');
+

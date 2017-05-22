@@ -67,12 +67,4 @@
         <p>Hello</p>
     </div> --}}
 
-
-
-
-
-
-
-
-
 @endsection
