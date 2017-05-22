@@ -17,14 +17,16 @@ class UsersTableSeeder extends Seeder
 
     // 2a. Create admin
     $admin = \App\User::create([
-        'name' => 'Gem Elaine',
+        'firstname' => 'Gem',
+        'lastname' => 'Elaine',
         'email' => 'gemstone@github.com',
         'password' => bcrypt('password')
     ]);
 
     // 2b. Create forum user
     $user = \App\User::create([
-        'name' => 'JulieQueen Starr',
+        'firstname' => 'JulieQueen',
+        'lastname' => 'Starr',
         'email' => 'jlqnstarr@github.com',
         'password' => bcrypt('password')
     ]);

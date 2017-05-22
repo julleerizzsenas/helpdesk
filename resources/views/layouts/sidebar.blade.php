@@ -7,7 +7,7 @@
   </div>
   <div class="profile_info">
     <span>Welcome,</span>
-    <h2>John Doe</h2>
+    <h2> {{ Auth::user()['firstname']. "  " .Auth::user()['lastname'] }}</h2>
   </div>
 </div>
 <!-- /menu profile quick info -->
@@ -17,10 +17,17 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
-    
-  </div>
-
-
-</div>
-<!-- /sidebar menu -->
+    <ul class="nav side-menu">
+      <li>
+        <a href="/dashboard">
+          <i class="fa fa-home"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="/create">
+            <i class="fa fa-edit"></i>Add Topic</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /sidebar menu -->
 

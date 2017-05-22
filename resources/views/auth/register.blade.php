@@ -1,6 +1,6 @@
 @extends('layouts.login_master')
 {{-- @extends('layouts.app') --}}
-@section('title' , 'Signup')
+@section('title' , 'Register')
 
 @section('content')
 <body class="login">
@@ -15,17 +15,29 @@
                         <form role="form" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
                             <h1>Create Account</h1>
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
 
-                                <input id="name" type="text" class="form-control" name="name" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                                <input id="firstname" type="text" class="form-control" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('firstname'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('name') }}</strong>
+                                    <strong>{{ $errors->first('firstname') }}</strong>
                                 </span>
                                 @endif
                             </div>
 
+                            <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
+
+                                <input id="lastname" type="text" class="form-control" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autofocus>
+
+                                @if ($errors->has('lastname'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('lastname') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+
+    
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <input id="email" type="text" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required>
 
