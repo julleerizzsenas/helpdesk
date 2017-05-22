@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Comments;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class CommentsController extends Controller
@@ -44,7 +44,7 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function show(Comments $comments)
+    public function show(Comment $comment)
     {
         //
     }
@@ -55,7 +55,7 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comments $comments)
+    public function edit(Comment $comment)
     {
         //
     }
@@ -67,7 +67,7 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comments $comments)
+    public function update(Request $request, Comment $comment)
     {
         //
     }
@@ -78,7 +78,7 @@ class CommentsController extends Controller
      * @param  \App\Comments  $comments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function destroy(Comment $comment)
     {
         //
     }

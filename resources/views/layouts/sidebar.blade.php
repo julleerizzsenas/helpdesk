@@ -26,8 +26,12 @@
           <a href="/create">
             <i class="fa fa-edit"></i>Add Topic</a>
           </li>
-        </ul>
+          <li>
+            <a href="/posts">
+              <i class="fa fa-file-text"></i>Topics</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <!-- /sidebar menu -->
+      <!-- /sidebar menu -->
 

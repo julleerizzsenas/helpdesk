@@ -18,12 +18,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/create', 'PostsController@create');
-Route::post('/store', 'PostsController@store');
-Route::get('/dashboard', 'PostsController@index');
+Route::get('home', 'HomeController@index')->name('home');
+Route::get('create', 'PostsController@create');
+Route::post('store', 'PostsController@store');
+Route::get('posts', 'PostsController@show');
 
 
-//Route::resource('create', 'PostsController');
-//Route::resource('dashboard', 'PostsController');
+//Route::resource('posts', 'PostsController');
+//Route::resource('show', 'PostsController');
+Route::resource('dashboard', 'DashboardController');
+
+
 
