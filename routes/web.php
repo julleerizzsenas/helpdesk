@@ -17,11 +17,10 @@ Route::get('/', 'PostsController@index')->name('home');
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
+Route::get('create', 'PostsController@create');
+Route::post('store', 'PostsController@store');
 Route::get('topics', 'PostsController@show');
 
-
-
-Route::resource('posts', 'PostsController');
 Route::resource('dashboard', 'DashboardController');
 
 

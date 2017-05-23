@@ -14,7 +14,7 @@ class DashboardController extends Controller
 
     public function index(Post $post)
     {
-
-        return view('pages.dashboard', compact('post'));
+    	$posts = Post::all();
+        return view('pages.dashboard', compact('posts'));
     }
-}
+

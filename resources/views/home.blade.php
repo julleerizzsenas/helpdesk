@@ -36,7 +36,14 @@
                 <h4>Tags</h4>
             </div>
             <div class="x_content">
-                <p>Some content</p>
+            @if (count($post->tags))
+                <ul>
+                    @foreach ($post->tags as $tag)
+                        <li> {{$tag->name}} </li>
+                    @endforeach
+                </ul>
+            @endif
+            
             </div>
         </div>
     </div>
