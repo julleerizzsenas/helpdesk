@@ -42,15 +42,12 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-
-    
     public function render($request, Exception $e)
     {
-       if ($e instanceof \HttpOz\Roles\Exceptions\RoleDeniedException || $e instanceof \HttpOz\Roles\Exceptions\GroupDeniedException) {
-
-            return response()->view('vendor.roles.error', compact('exception'), 403);
+        if (config('app.debug'))
+        {
+            return $this->renderExceptionWithWhoops($e);
         }
-
         return parent::render($request, $e);
     }
 
