@@ -19,7 +19,7 @@
 
 
 <div class="col-sm-8 blog-main">
-	<form method = "POST" action = "/store">
+	<form method = "POST" action = "/posts">
 		{{csrf_field() }}
 
 		<div class="form-group">

@@ -8,6 +8,6 @@ class Comments extends Model
 {
 	public function getComments()
 	{
-		return $this->hasMany('App\Comments', 'post_id', 'id');
+		return $this->hasMany('App\Comment', 'post_id', 'id');
 	}
 }

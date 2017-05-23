@@ -14,9 +14,18 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
+
     public function index()
     {
-        
+        $posts = Post::all();
+
+        return view('home', compact('posts'));
     }
 
     /**
@@ -37,6 +46,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
@@ -77,7 +87,7 @@ class PostsController extends Controller
             dd('Fail!');            
         }
 
-                return redirect('/create');
+                return redirect('/posts/create');
 
 
     }
@@ -93,7 +103,7 @@ class PostsController extends Controller
         
         //$post = Post::find(22);
         //dd($post);
-        return view('pages.show');
+        return view('pages.show', compact('post'));
     }
 
     /**

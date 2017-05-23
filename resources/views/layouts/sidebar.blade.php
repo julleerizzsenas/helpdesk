@@ -23,7 +23,7 @@
           <i class="fa fa-home"></i>Dashboard</a>
         </li>
         <li>
-          <a href="/create">
+          <a href="/posts/create">
             <i class="fa fa-edit"></i>Add Topic</a>
           </li>
           <li>

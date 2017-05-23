@@ -12,6 +12,6 @@ class Post extends Model
 
 	public function getTags()
 	{
-		return $this->hasMany('App\Tags', 'post_id', 'id');
+		return $this->hasMany(Tag::class);
 	}
 }
