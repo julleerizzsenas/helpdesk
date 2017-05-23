@@ -8,9 +8,9 @@
       <div class="x_title">
         <h2>Recent Posts</h2>
         <ul class="nav pull-right panel_toolbox">
-                                    <li><i class="fa fa-comments-o fa-lg" aria-hidden="true">25</i>&nbsp;&nbsp;&nbsp;</li>
-                                    <li><i class="fa fa-eye fa-lg">50</i></li>
-                                </ul>
+                            <li><i class="fa fa-comments-o fa-lg" aria-hidden="true">25</i>&nbsp;&nbsp;&nbsp;</li>
+                            <li><i class="fa fa-eye fa-lg">50</i></li>
+                        </ul> 
         <div class="clearfix"></div>
       </div>
       <div class="x_content">

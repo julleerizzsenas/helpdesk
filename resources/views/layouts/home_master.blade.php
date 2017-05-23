@@ -16,5 +16,6 @@
 
   <div class="x_panel">
     @yield('content')
-  </div>
+    <hr>
   @include('layouts.home_footer')
+  </div>

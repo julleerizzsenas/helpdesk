@@ -11,11 +11,6 @@
 |
 */
 
-
-// Route::get('/', function () {
-//     return view('home');
-// });
-
 Route::get('/', 'PostsController@index')->name('home');
 
 

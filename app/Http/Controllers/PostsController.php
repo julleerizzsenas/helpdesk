@@ -9,17 +9,13 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function __construct()
+    
     {
-        $this->middleware('auth')->except(['index', 'show']);
-    }
 
+        $this->middleware('auth')->except(['index', 'show']);
+
+    }
 
     public function index()
     {
@@ -100,10 +96,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        
-        //$post = Post::find(22);
-        //dd($post);
-        return view('pages.show', compact('post'));
+        return view('pages.show',compact('post'));
     }
 
     /**
