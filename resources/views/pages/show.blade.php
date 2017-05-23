@@ -6,7 +6,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
       <div class="x_title">
-        <h2>Recent Posts</h2>
+        <h2>{{ $post->topicname }}</h2>
         <ul class="nav pull-right panel_toolbox">
                             <li><i class="fa fa-comments-o fa-lg" aria-hidden="true">25</i>&nbsp;&nbsp;&nbsp;</li>
                             <li><i class="fa fa-eye fa-lg">50</i></li>

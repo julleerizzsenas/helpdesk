@@ -19,7 +19,13 @@ class PostsController extends Controller
 
     public function index()
     {
+
         $posts = Post::all();
+
+        // foreach ($posts as $post){
+        //     dd($post->user());
+
+        // }
 
         return view('home', compact('posts'));
     }
