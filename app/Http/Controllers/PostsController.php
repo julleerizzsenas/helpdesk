@@ -10,11 +10,8 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     public function __construct()
-    
     {
-
         $this->middleware('auth')->except(['index', 'show']);
-
     }
 
     public function index()
@@ -84,8 +81,6 @@ class PostsController extends Controller
         }
 
                 return redirect('/posts/create');
-
-
     }
 
     /**
@@ -96,7 +91,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view('pages.show',compact('post'));
+        return view('pages.show', compact('post'));
     }
 
     /**

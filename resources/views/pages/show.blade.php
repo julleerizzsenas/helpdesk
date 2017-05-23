@@ -26,8 +26,7 @@
                   <div class="byline">
                     <span>13 hours ago</span> by <a> {{ Auth::user()['firstname']. "  " .Auth::user()['lastname'] }}</a>
                   </div>
-                  <p>{{ $post->topicname}}
-                  </p>
+                  <p>{{ $post->topicname}}</p>
                 </div>
               </div>
             </li>
