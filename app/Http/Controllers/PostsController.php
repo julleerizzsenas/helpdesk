@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Tag;
 use App\Post;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -16,13 +17,7 @@ class PostsController extends Controller
 
     public function index()
     {
-
         $posts = Post::all();
-
-        // foreach ($posts as $post){
-        //     dd($post->user());
-
-        // }
 
         return view('home', compact('posts'));
     }
@@ -49,7 +44,7 @@ class PostsController extends Controller
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
-                                'user' => auth()->user()->id,
+                                'user_id' => auth()->user()->id,
                                 'image' => 'test.jpg',
 
             ]);
@@ -59,7 +54,7 @@ class PostsController extends Controller
             $tag = Tag::create([
                                 'post_id' => $post->id,
                                 'name' => $request->get('tags'),
-                                'user' => auth()->user()->id
+                                'user_id' => auth()->user()->id
                                 
 
             ]);
@@ -97,6 +92,8 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
+
+
         return view('pages.show', compact('post'));
     }
 

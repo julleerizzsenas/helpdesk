@@ -34,6 +34,7 @@
 
 		<div class="form-group">
 			<label for="tags">Tags:</label>	
+			
 			{{-- <input id="tags" name= "tags" type="text" class="tags form-control" data-tagsinput-init="true" style="display: none;">
 			<div id="tags_1_tagsinput" class="tagsinput" style="width: auto; min-height: 100px; height: 100px;">
 				<span class="tag">
@@ -47,6 +48,7 @@
 				<div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;">
 				</div>
 			</div> --}}
+
 			<input type="text" class="form-control" id="tags" name="tags">
 
 		</div>

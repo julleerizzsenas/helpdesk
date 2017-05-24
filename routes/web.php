@@ -19,8 +19,11 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('create', 'PostsController@create');
 Route::post('store', 'PostsController@store');
-Route::get('topics', 'PostsController@show');
+Route::post('posts/{post}/comments', 'CommentsController@store');
 
+
+Route::resource('posts', 'PostsController');
+Route::resource('posts/{id}', 'PostsController');
 Route::resource('dashboard', 'DashboardController');
 
 

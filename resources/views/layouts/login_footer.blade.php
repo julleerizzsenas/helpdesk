@@ -2,15 +2,15 @@
 </div>
 
 <!-- jQuery -->
-<script src="vendors/jquery/dist/jquery.min.js"></script>
+<script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
-<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- FastClick -->
-<script src="vendors/fastclick/lib/fastclick.js"></script>
+<script src="{{asset('vendors/fastclick/lib/fastclick.js')}}"></script>
 <!-- NProgress -->
-<script src="vendors/nprogress/nprogress.js"></script>
+<script src="{{asset('vendors/nprogress/nprogress.js')}}"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="js/custom.min.js"></script>
+<script src="{{asset('js/custom.min.js')}}"></script>
 </body>
 </html>

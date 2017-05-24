@@ -9,8 +9,7 @@
           <div class="tile-stats">
             <div class="icon"><i class="fa fa-file-text"></i></div>
             <div class="count">179</div>
-            <h3> 
-            <a href="/topics">Topics</h3>
+            <h3>Topics</h3>
             <p>Lorem ipsum psdea itgum rixt.</p>
           </div>
         </div>

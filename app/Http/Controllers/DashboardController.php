@@ -18,3 +18,8 @@ class DashboardController extends Controller
         return view('pages.dashboard', compact('posts'));
     }
 
+    public function show(Post $post)
+    {
+        return view('pages.show', compact('post'));
+    }
+}

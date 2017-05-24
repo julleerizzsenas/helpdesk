@@ -10,16 +10,18 @@ class Post extends Model
 
 	public $timestamps = true;
 
-	public function getTags()
+	public function tags()
 	{
 		return $this->hasMany(Tag::class);
 	}
 
 	public function user()
-
     {
-
     	return $this->belongsTo(User::class, 'user_id');
+    }
 
+    public function comments()
+    {
+    	return $this->hasMany(Comment::class);
     }
 }
