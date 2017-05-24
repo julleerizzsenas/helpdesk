@@ -9,10 +9,10 @@ class Tag extends Model
 	protected $guarded = [];
     public $timestamps = false;
 
-    public function getPosts()
-    {
-    	return $this->belongsTo(Post::class);
-    }
+    // public function getPosts()
+    // {
+    // 	return $this->belongsTo(Post::class);
+    // }
 
     public function posts()
 
@@ -20,7 +20,14 @@ class Tag extends Model
 
  		return $this->belongsToMany(Post::class);
 
-
  	}
+
+ 	public function user()
+
+    {
+
+    	return $this->belongsTo(User::class, 'user');
+
+    }
 
 }

@@ -13,21 +13,24 @@ class PostsController extends Controller
     
     {
 
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth')->except(['index']);
 
     }
 
     public function index()
     {
 
-        $posts = Post::all();
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
+        $tags = Tag::all();
 
         // foreach ($posts as $post){
         //     dd($post->user());
 
         // }
 
-        return view('home', compact('posts'));
+        return view('home', compact('posts', 'tags'));
     }
 
     /**
@@ -52,7 +55,7 @@ class PostsController extends Controller
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
-                                'user' => auth()->user()->id,
+                                'user_id' => auth()->user()->id,
                                 'image' => 'test.jpg',
 
             ]);
@@ -62,7 +65,7 @@ class PostsController extends Controller
             $tag = Tag::create([
                                 'post_id' => $post->id,
                                 'name' => $request->get('tags'),
-                                'user' => auth()->user()->id
+                                'user_id' => auth()->user()->id
                                 
 
             ]);
@@ -102,6 +105,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
+        // return view('layouts.show_post',compact('post'));
         return view('pages.show',compact('post'));
     }
 

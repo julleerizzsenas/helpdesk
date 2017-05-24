@@ -19,11 +19,9 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('create', 'PostsController@create');
 Route::post('store', 'PostsController@store');
-Route::get('posts', 'PostsController@show');
+Route::get('topics', 'PostsController@show');
 
-
-Route::get('posts', 'PostsController@show');
-//Route::resource('show', 'PostsController');
+Route::resource('posts', 'PostsController');
 Route::resource('dashboard', 'DashboardController');
 
 

@@ -10,7 +10,7 @@ class Post extends Model
 
 	public $timestamps = true;
 
-	public function getTags()
+	public function tags()
 	{
 		return $this->hasMany(Tag::class);
 	}
@@ -22,4 +22,19 @@ class Post extends Model
     	return $this->belongsTo(User::class, 'user_id');
 
     }
+
+    public function scopeFilter($query, $filters)
+
+ 	{
+
+ 		if ($month = $filters['month']){
+            $query->whereMonth('created_at', Carbon::parse($month)->month);
+        }
+
+         if ($year = $filters['year']){
+            $query->whereYear('created_at', $year);
+        }
+
+ 	}
+
 }
