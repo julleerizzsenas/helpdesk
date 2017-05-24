@@ -14,7 +14,15 @@
   </div>
   </div>
 
+
   <div class="x_panel">
+  <div class="jumbotron text-center">
+    <div class="clearfix"></div>
+    <h1 class="upper">Knowledge Base</h1><br>
+    <div class="center">
+        <a type="button" class="btn btn-primary" href="/login">Login Now</a>
+    </div>
+</div>
     @yield('content')
     <hr>
   @include('layouts.home_footer')

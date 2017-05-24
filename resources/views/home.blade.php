@@ -2,15 +2,9 @@
 
 @section('content')
 
-<div class="jumbotron text-center">
-    <div class="clearfix"></div>
-    <h1 class="upper">Knowledge Base</h1><br>
-    <div class="center">
-        <a type="button" class="btn btn-primary" href="/login">Login Now</a>
-    </div>
-</div>
+
 <div class="row">
-    <div class="col-md-8 dashboard_graph">
+    <div class="col-md-9 dashboard_graph">
         <div class="col-md-12">
             <div class="x_panel">
                 @foreach ($posts as $post)
@@ -19,14 +13,18 @@
             </div>
         </div>
     </div>  
-    <div class="col-md-4 dashboard_graph">          
+    <div class="col-md-3 dashboard_graph">          
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
                 <h4>Related Topics</h4>
             </div>
             <div class="x_content">
-                <p>Some content</p>
+                @foreach ($posts as $post)
+                    <a href="/posts/{{ $post->topicname }}">
+                         {{ $post->topicname }}<hr>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div> 
@@ -35,14 +33,12 @@
             <div class="x_title">
                 <h4>Tags</h4>
             </div>
-            <div class="x_content">
-            @if (count($post->tags))
-                <ul>
-                    @foreach ($post->tags as $tag)
-                        <li> {{$tag->name}} </li>
-                    @endforeach
-                </ul>
-            @endif
+            <div class="x_content pull-left">
+                @foreach ($tags as $tag)
+                    <a href="/posts/tags/{{ $tag->name }}">  
+                        {{ $tag->name }}<hr>
+                    </a>
+                @endforeach
             
             </div>
         </div>
