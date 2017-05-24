@@ -15,26 +15,55 @@
       </div>
       <div class="x_content">
         <div class="dashboard-widget-content">
+    
+    @if(count($post->tags))
+      <ul>
+        @foreach($post->tags as $tag)
+          <li>
+            {{-- <a href="/posts/tags {{ $tag->name }}"> --}}
+              {{ $tag->name }}
+            </a>
+          </li>
+        @endforeach
+      </ul>
+    @endif
 
-          <ul class="list-unstyled timeline widget">
-            <li>
-              <div class="block">
-                <div class="block_content">
-                  <h2 class="title">
-                    <a>{{$post->topicname}}</a>
-                  </h2>
-                  <div class="byline">
-                    <span>13 hours ago</span> by <a> {{ Auth::user()['firstname']. "  " .Auth::user()['lastname'] }}</a>
-                  </div>
-                  <p>{{ $post->topicname}}
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
+  {{$post->description}} 
+  
+
+  <hr>
+
+  <div class="comments">
+    <ul class="list-group">
+      @foreach ($post->comments as $comment)
+      <li class="list-group-item">
+        <strong>
+          {{$comment->created_at->diffForHumans()}}: &nbsp;
+        </strong>
+        {{$comment->comments}}
+      </li>
+      @endforeach
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <div class="card-block">
+      <form method="POST" action="/posts/{{$post->id}}/comments">
+          {{csrf_field()}}
+        <div class="form-group">
+          <textarea name="comments" placeholder="Your comment here." class="form-control"></textarea>
         </div>
-      </div>
+        <div class = "form-group">
+          <button type="submit" class="btn btn-primary">Add Comment</button>
+        </div>
+      </form>
+      
+      {{-- @include('sample.errors') --}}
+
     </div>
   </div>
+  
 </div>
 @endsection

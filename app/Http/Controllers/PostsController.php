@@ -5,32 +5,20 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Tag;
 use App\Post;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
     public function __construct()
-    
     {
-
-        $this->middleware('auth')->except(['index']);
-
+        $this->middleware('auth');
     }
 
     public function index()
     {
-
-        $posts = Post::latest()
-            ->filter(request(['month', 'year']))
-            ->get();
-        $tags = Tag::all();
-
-        // foreach ($posts as $post){
-        //     dd($post->user());
-
-        // }
-
-        return view('home', compact('posts', 'tags'));
+        $posts = Post::all();
+        return view('pages.dashboard',compact('posts'));
     }
 
     /**
@@ -51,13 +39,11 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
                                 'user_id' => auth()->user()->id,
                                 'image' => 'test.jpg',
-
             ]);
 
         if($post)
@@ -66,8 +52,6 @@ class PostsController extends Controller
                                 'post_id' => $post->id,
                                 'name' => $request->get('tags'),
                                 'user_id' => auth()->user()->id
-                                
-
             ]);
 
             //$tags = false;
@@ -78,7 +62,6 @@ class PostsController extends Controller
                     'message', 'Your post has now been published.');
                 session()->flash(
                     'alert', 'alert alert-success');                
-
             }else
             {
                 session()->flash(
@@ -87,14 +70,10 @@ class PostsController extends Controller
                   'alert', 'alert alert-danger');                
             }
 
-
         }else{
             dd('Fail!');            
         }
-
                 return redirect('/posts/create');
-
-
     }
 
     /**
@@ -105,8 +84,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        // return view('layouts.show_post',compact('post'));
-        return view('pages.show',compact('post'));
+        return view('pages.show', compact('post'));
     }
 
     /**

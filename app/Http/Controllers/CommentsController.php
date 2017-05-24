@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\Comment;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+      
     }
 
     /**
@@ -24,18 +25,26 @@ class CommentsController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    
+     // * Store a newly created resource in storage.
+     // *
+     // * @param  \Illuminate\Http\Request  $request
+     // * @return \Illuminate\Http\Response
+     
+    public function store(Post $post)
     {
-        //
+        $comment = Comment::create([
+                                'post_id' => $post->id,
+                                'comments' => request()->get('comments'),
+                                'image' => 'test.jpg',
+                                'user_id' => auth()->user()->id,
+
+            ]);
+
+        return back();
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index']);
     }
 
     /**
@@ -24,8 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
+        $tags = Tag::all();
 
-        $posts = Post::all();
-        return view('pages.dashboard',compact('posts'));
+        return view('home', compact('posts', 'tags'));      
     }
+
+    
 }
