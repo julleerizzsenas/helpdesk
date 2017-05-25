@@ -8,7 +8,7 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-file-text"></i></div>
-        <div class="count">179</div>
+        <div class="count">{{ $totalposts }}</div>
         <h3>Topics</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
@@ -17,7 +17,7 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-comments-o"></i></div>
-        <div class="count">179</div>
+        <div class="count">{{ $totalcomments }}</div>
         <h3>Comments</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
@@ -26,7 +26,7 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-tags"></i></div>
-        <div class="count">179</div>
+        <div class="count">{{ $totaltags }}</div>
         <h3>Tags</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
@@ -51,7 +51,7 @@
       @foreach ($posts as $post)
       <div class="x_title">
         <a href="/posts/{{ $post->id }}">
-          <h2>{{ $post->topicname }}
+          <h2><b>{{ $post->topicname }}</b>
           </a>
           <small> by {{ $post->user->firstname." ".$post->user->lastname }}</small></h2>
           <ul class="nav pull-right panel_toolbox">

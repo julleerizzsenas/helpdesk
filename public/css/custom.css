@@ -4255,6 +4255,13 @@ footer {
     border:solid 1px red;
 }
 
+.menu ul{
+  list-style: none;
+}
+
+.menu li{
+  display: inline;
+}
 
 
 

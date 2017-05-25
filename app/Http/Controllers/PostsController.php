@@ -18,7 +18,15 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('pages.dashboard',compact('posts'));
+        $totalposts = count($posts);
+
+        $comments = Comment::all();
+        $totalcomments = count($comments);
+
+        $tags = Tag::all();
+        $totaltags = count($tags);
+
+        return view('pages.dashboard',compact('posts', 'totalposts', 'totalcomments', 'totaltags'));
     }
 
     /**
@@ -84,7 +92,13 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view('pages.show', compact('post'));
+        $comments = Comment::where('post_id', '<=', $post)->get();
+        $tcomments = count($comments);
+
+        $tags = Tag::all();
+        $ttags = count($tags);
+
+        return view('pages.show', compact('post', 'tcomments', 'ttags'));
     }
 
     /**
