@@ -19,7 +19,7 @@
   <div class="menu_section">
     <ul class="nav side-menu">
       <li>
-        <a href="/home">
+        <a href="/dashboard">
           <i class="fa fa-home"></i>Dashboard</a>
         </li>
         <li>

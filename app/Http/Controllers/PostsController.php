@@ -22,16 +22,13 @@ class PostsController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
         
-        $posts = Post::all();
-        $totalposts = count($posts);
+        $totalposts = Post::count('id');
 
-        $comments = Comment::all();
-        $totalcomments = count($comments);
-
-        $tags = Tag::all();
-        $totaltags = count($tags);
-
-        return view('pages.dashboard',compact('posts', 'totalposts', 'totalcomments', 'totaltags'));
+        $totalcomments = Comment::count('id');
+       
+        $totaltags = Tag::count('id');
+       
+        return view('pages.dashboard',compact('posts', 'totalposts','totalcomments', 'totaltags'));
     }
 
     /**
@@ -52,12 +49,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->all());
+        // dd($request->get('description'));
+
+
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
                                 'user_id' => auth()->user()->id,
                                 'image' => 'test.jpg',
             ]);
+
+
 
         if($post)
         {
@@ -97,11 +100,9 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        $comments = Comment::where('post_id', '<=', $post)->get();
-        $tcomments = count($comments);
-
-        $tags = Tag::all();
-        $ttags = count($tags);
+        $tcomments = Comment::count('id');
+        
+        $ttags = Comment::count('id');
 
         return view('layouts.filter', compact('post', 'tcomments', 'ttags'));
     }

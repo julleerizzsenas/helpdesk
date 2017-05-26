@@ -19,7 +19,7 @@
       <h1 class="upper">Knowledge Base</h1><br>
       <div class="center">
         @if(auth()->check())
-          <a type="button" class="btn btn-info" href="/home">Dashboard</a>
+          <a type="button" class="btn btn-info" href="/dashboard">Dashboard</a>
         @else
           <a type="button" class="btn btn-info" href="/login">Login Now</a>
         @endif

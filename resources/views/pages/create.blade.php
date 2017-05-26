@@ -29,8 +29,9 @@
 
 		<div class="form-group">
 			<label for="description">Description:</label>
+        	<textarea name="description" id="description" class="form-control"></textarea>
 
-			<div class="x_content">
+			{{-- <div class="x_content">
 				<div id="alerts"></div>
 				<div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
 					<div class="btn-group">
@@ -101,21 +102,17 @@
 					</div>
 				</div>
 
-				<div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true">
-					<textarea id="description" class="form-control" name="description" style="display:none;"></textarea>
+				<div id="editor-one" class="form-group editor-wrapper placeholderText" contenteditable="true">
+				<textarea id="description" class="form-control" name="description" value="desc" style="display:none;"></textarea>
 				</div>
 
-				<textarea id="description" class="form-control" name="description" style="display:none;"></textarea>
-
-				{{-- <div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true"></div>
-
-				<textarea id="description" class="form-control" name="description" style="display:none;"></textarea> --}}
-			</div>
+			</div> --}}
 		</div>
 
 		<div class="form-group">
 			<label for="tags">Tags:</label>	
 			<input type="text" class="form-control" id="tags" name="tags">
+		</div>
 
 {{-- <input id="tags" name= "tags" type="text" class="tags form-control" data-tagsinput-init="true" style="display: none;">
 <div id="tags_1_tagsinput" class="tagsinput" style="width: auto; min-height: 100px; height: 100px;">
@@ -131,22 +128,20 @@
 </div>
 </div> --}}
 
+		<div class="form-group">
+			<label for="image">Add Image:</label>	
+			<br>
+			<div class="btn-group">
+				<a class="btn" title="Insert picture (or just drag & drop)" id="image"><i class="fa fa-picture-o"></i></a>
+				<input type="file" data-role="magic-overlay" data-target="#image" data-edit="image" />
+			</div>
+		</div>
 
-</div>
+		<div class = "form-group">
+			<button type="submit" class="btn btn-primary">Publish</button>
+		</div>
 
-<div class="form-group">
-	<label for="image">Add Image:</label>	
-	<br>
-	<div class="btn-group">
-		<a class="btn" title="Insert picture (or just drag & drop)" id="image"><i class="fa fa-picture-o"></i></a>
-		<input type="file" data-role="magic-overlay" data-target="#image" data-edit="image" />
-	</div>
-</div>
-
-<div class = "form-group">
-	<button type="submit" class="btn btn-primary">Publish</button>
-</div>
-</form>
+	</form>
 </div>
 
 @endsection
