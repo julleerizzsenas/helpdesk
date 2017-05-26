@@ -4268,9 +4268,13 @@ footer {
     background-color: #EDEDED;
 }
 
+.menu ul{
+  list-style: none;
+}
 
-
-
+.menu li{
+  display: inline;
+}
 
 
 

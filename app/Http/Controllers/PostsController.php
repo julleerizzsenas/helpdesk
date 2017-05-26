@@ -17,10 +17,21 @@ class PostsController extends Controller
 
     public function index()
     {
+
         $posts = Post::latest()
             ->filter(request(['month', 'year']))
             ->get();
-        return view('pages.dashboard',compact('posts'));
+        
+        $posts = Post::all();
+        $totalposts = count($posts);
+
+        $comments = Comment::all();
+        $totalcomments = count($comments);
+
+        $tags = Tag::all();
+        $totaltags = count($tags);
+
+        return view('pages.dashboard',compact('posts', 'totalposts', 'totalcomments', 'totaltags'));
     }
 
     /**
@@ -86,7 +97,13 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view('layouts.filter', compact('post'));
+        $comments = Comment::where('post_id', '<=', $post)->get();
+        $tcomments = count($comments);
+
+        $tags = Tag::all();
+        $ttags = count($tags);
+
+        return view('layouts.filter', compact('post', 'tcomments', 'ttags'));
     }
 
     /**
