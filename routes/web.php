@@ -16,10 +16,11 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('home', 'PostsController@index')->name('home');
+Route::get('home', 'PostsController@index');
 Route::get('create', 'PostsController@create');
 Route::post('store', 'PostsController@store');
 Route::post('posts/{post}/comments', 'CommentsController@store');
+// Route::post('posts/topics/{id}', 'PostController@show');
 
 
 Route::resource('posts', 'PostsController');

@@ -3,7 +3,7 @@
 <!-- menu profile quick info -->
 <div class="profile clearfix">
   <div class="profile_pic">
-    <img src="images/download.png" alt="..." class="img-circle profile_img">
+    <img src="/images/download.png" alt="..." class="img-circle profile_img">
   </div>
   <div class="profile_info">
     <span>Welcome,</span>
@@ -19,7 +19,7 @@
   <div class="menu_section">
     <ul class="nav side-menu">
       <li>
-        <a href="/dashboard">
+        <a href="/home">
           <i class="fa fa-home"></i>Dashboard</a>
         </li>
         <li>

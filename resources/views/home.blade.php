@@ -1,9 +1,6 @@
 @extends('layouts.home_master')
 
 @section('content')
-
-
-<div class="row">
     <div class="col-md-9 dashboard_graph">
         <div class="col-md-12">
             <div class="x_panel">
@@ -21,7 +18,7 @@
             </div>
             <div class="x_content">
                 @foreach ($posts as $post)
-                    <a href="/posts/{{ $post->topicname }}">
+                    <a href="/posts/{{ $post->id }}">
                          {{ $post->topicname }}<hr>
                     </a>
                 @endforeach
@@ -35,14 +32,12 @@
             </div>
             <div class="x_content pull-left">
                 @foreach ($tags as $tag)
-                    <a href="/posts/tags/{{ $tag->name }}">  
+                    <a href="/posts/{{ $post->id }}">  
                         {{ $tag->name }}<hr>
                     </a>
-                @endforeach
-            
+                @endforeach      
             </div>
         </div>
     </div>
-</div>`
 </div>
 @endsection

@@ -12,12 +12,14 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
         return view('pages.dashboard',compact('posts'));
     }
 
@@ -84,7 +86,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view('pages.show', compact('post'));
+        return view('layouts.filter', compact('post'));
     }
 
     /**
