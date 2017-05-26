@@ -12,11 +12,16 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     public function index()
     {
+
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
+        
         $posts = Post::all();
         $totalposts = count($posts);
 
@@ -98,7 +103,7 @@ class PostsController extends Controller
         $tags = Tag::all();
         $ttags = count($tags);
 
-        return view('pages.show', compact('post', 'tcomments', 'ttags'));
+        return view('layouts.filter', compact('post', 'tcomments', 'ttags'));
     }
 
     /**

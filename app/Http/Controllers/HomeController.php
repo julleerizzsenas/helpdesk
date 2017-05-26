@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except(['index']);
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     /**
@@ -33,5 +33,9 @@ class HomeController extends Controller
         return view('home', compact('posts', 'tags'));      
     }
 
+    public function show(Post $post)
+    {
+        return view('layouts.show_post', compact('post'));
+    }
     
 }

@@ -8,6 +8,7 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-file-text"></i></div>
+
         <div class="count">{{ $totalposts }}</div>
         <h3>Topics</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
@@ -17,6 +18,8 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-comments-o"></i></div>
+
+
         <div class="count">{{ $totalcomments }}</div>
         <h3>Comments</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
@@ -26,6 +29,7 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-tags"></i></div>
+
         <div class="count">{{ $totaltags }}</div>
         <h3>Tags</h3>
         <p>Lorem ipsum psdea itgum rixt.</p>
@@ -49,6 +53,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
       @foreach ($posts as $post)
+
       <div class="x_title">
         <a href="/posts/{{ $post->id }}">
           <h2><b>{{ $post->topicname }}</b>

@@ -7,7 +7,7 @@
 			<div class="x_panel">
 				<div class="x_title">
 					<h2><b>{{ $post->topicname }}</b>
-        				</a><i class="small">by {{ $post->user->firstname." ".$post->user->lastname }}</i></h2>
+        				<i class="small">by {{ $post->user->firstname." ".$post->user->lastname }}</i></h2>
 
         				
 					<ul class="nav pull-right panel_toolbox">
@@ -26,7 +26,8 @@
 											<p class="pull-right"> Date Published: <i class="green">{{ $post->created_at->toFormattedDateString() }}</i></p>
 										</p>
 										<br>
-									</div>				
+									</div>	
+
 								</div>
 							</li>
 						</ul>
