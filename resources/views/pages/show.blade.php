@@ -73,5 +73,9 @@
   </div>
 </div>
 
+<div class="row pull-right">
+      <h4><u><a href="/home"><i class="fa fa-long-arrow-left">&nbsp;</i>Return Dashboard</a></u></h4>
+      </div>
+
 {{-- </div> --}}
 @endsection

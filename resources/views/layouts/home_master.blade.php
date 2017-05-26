@@ -26,9 +26,9 @@
       </div><br><br>
     </div>
     <div class="x_panel">
-      <div class="x_content">
+      {{-- <div class="x_content"> --}}
         @yield('content')
-      </div>
+      {{-- </div> --}}
       <div class="x_content">
         @include('layouts.home_footer')
       </div>        
