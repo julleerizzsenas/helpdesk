@@ -16,7 +16,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('home', 'PostsController@index')->name('home');
+Route::get('dashboard', 'PostsController@index')->name('dashboard');
 Route::get('create', 'PostsController@create');
 Route::post('store', 'PostsController@store');
 Route::post('posts/{post}/comments', 'CommentsController@store');
@@ -24,7 +24,8 @@ Route::post('posts/{post}/comments', 'CommentsController@store');
 
 Route::resource('posts', 'PostsController');
 Route::resource('posts/{id}', 'PostsController');
-Route::resource('dashboard', 'DashboardController');
+
+
 
 
 
