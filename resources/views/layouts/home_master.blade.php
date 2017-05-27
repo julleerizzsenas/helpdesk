@@ -12,15 +12,15 @@
         </ul>
       </div>
       {{-- </div> --}}
-      <br><br>
-      {{-- <div class="x_panel"> --}}
-      <div class="bg-title text-center"><br><br>
-        <div class="clearfix"></div>
-        <h1 class="upper">Knowledge Base</h1><br>
-        <div class="center">
-          @if(auth()->check())
+    <br><br>
+    {{-- <div class="x_panel"> --}}
+    <div class="bg-title text-center"><br><br>
+      <div class="clearfix"></div>
+      <h1 class="upper">Knowledge Base</h1><br>
+      <div class="center">
+        @if(auth()->check())
           <a type="button" class="btn btn-info" href="/dashboard">Dashboard</a>
-          @else
+        @else
           <a type="button" class="btn btn-info" href="/login">Login Now</a>
           @endif
         </div><br><br>

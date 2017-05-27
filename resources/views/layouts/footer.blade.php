@@ -17,6 +17,13 @@
 <!-- NProgress -->
 <script src="{{asset('vendors/nprogress/nprogress.js')}}"></script>
 
+<script src="{{asset('vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')}}"></script>
+
+<script src="{{asset('vendors/jquery.hotkeys/jquery.hotkeys.js')}}"></script>
+
+<script src="{{asset('vendors/google-code-prettify/src/prettify.js')}}"></script>
+
+
 <!-- Custom Theme Scripts -->
 <script src="{{asset('js/custom.min.js')}}"></script>
 <script data-rocketsrc="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js" type="text/rocketscript"></script>
