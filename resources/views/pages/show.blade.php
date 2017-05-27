@@ -7,8 +7,7 @@
     <div class="x_panel">
       <div class="x_title">
         <h2><b>{{ $post->topicname }}</b>
-          <small>by {{ $post->user->firstname." ".$post->user->lastname }}
-          </small>
+          <i class="small">by {{ $post->user->firstname." ".$post->user->lastname }}</i>
         </h2>
         <ul class="nav pull-right panel_toolbox">
           <li>{{$post->created_at->diffForHumans()}} &nbsp;</li>
@@ -51,7 +50,7 @@
       <li class="list-group-item">
         <strong><i class="green">{{ $comment->user->firstname." ".$comment->user->lastname }}:&nbsp;</i></strong>
         {{$comment->comments}}
-        <small  class="nav pull-right panel_toolbox">{{$comment->created_at->diffForHumans()}}</small>
+        <small class="nav pull-right panel_toolbox">{{$comment->created_at->diffForHumans()}}</small>
       </li>
       @endforeach
     </ul>
@@ -74,8 +73,8 @@
 </div>
 
 <div class="row pull-right">
-      <h4><u><a href="/home"><i class="fa fa-long-arrow-left">&nbsp;</i>Return Dashboard</a></u></h4>
-      </div>
+  <h4><u><a href="/dashboard"><i class="fa fa-long-arrow-left">&nbsp;</i>Return to Dashboard</a></u></h4>
+</div>
 
 {{-- </div> --}}
 @endsection

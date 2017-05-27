@@ -13,7 +13,7 @@
                     <section class="login_content">
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
-                            <h1>Login Form</h1>
+                            <h3>Login Form</h3>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <input id="email" type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
@@ -50,7 +50,7 @@
                                 <div class="clearfix"></div>
                                 <br />
                                 <div>
-                                    <h1><i class="fa fa-paw"></i> Knowledge Base</h1>
+                                    <h3><i class="fa fa-paw"></i> Knowledge Base</h3>
                                     <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                                 </div>
                             </div>

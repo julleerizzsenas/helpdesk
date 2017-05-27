@@ -19,17 +19,17 @@
   <div class="menu_section">
     <ul class="nav side-menu">
       <li>
-        <a href="/home">
+        <a href="/dashboard">
           <i class="fa fa-home"></i>Dashboard</a>
         </li>
         <li>
           <a href="/create">
             <i class="fa fa-edit"></i>Add Topic</a>
           </li>
-        {{-- <li>
-        <a href="/topics">
-        <i class="fa fa-file-text"></i>Topics</a>
-        </li> --}}
+{{-- <li>
+<a href="/topics">
+<i class="fa fa-file-text"></i>Topics</a>
+</li> --}}
 </ul>
 </div>
 </div>

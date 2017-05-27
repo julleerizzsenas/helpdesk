@@ -12,29 +12,30 @@
         </ul>
       </div>
       {{-- </div> --}}
-    <br><br>
-    {{-- <div class="x_panel"> --}}
-    <div class="bg-title text-center"><br><br>
-      <div class="clearfix"></div>
-      <h1 class="upper">Knowledge Base</h1><br>
-      <div class="center">
-        @if(auth()->check())
-          <a type="button" class="btn btn-info" href="/home">Dashboard</a>
-        @else
+      <br><br>
+      {{-- <div class="x_panel"> --}}
+      <div class="bg-title text-center"><br><br>
+        <div class="clearfix"></div>
+        <h1 class="upper">Knowledge Base</h1><br>
+        <div class="center">
+          @if(auth()->check())
+          <a type="button" class="btn btn-info" href="/dashboard">Dashboard</a>
+          @else
           <a type="button" class="btn btn-info" href="/login">Login Now</a>
-        @endif
-      </div><br><br>
-    </div>
-    <div class="x_panel">
-      {{-- <div class="x_content"> --}}
+          @endif
+        </div><br><br>
+      </div>
+      <div class="x_panel">
+        {{-- <div class="x_content"> --}}
         @yield('content')
+        {{-- </div> --}}
+        <div class="x_content">
+          @include('layouts.home_footer')
+        </div>        
+      </div>
+
+
+
+
       {{-- </div> --}}
-      <div class="x_content">
-        @include('layouts.home_footer')
-      </div>        
-    </div>
-
-
-          
-       
-    {{-- </div> --}}
+      

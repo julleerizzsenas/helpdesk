@@ -18,7 +18,7 @@
 <hr>
 
 
-<div class="col-sm-8 blog-main">
+<div class="col-md-12 blog-main">
 	<form method = "POST" action = "/posts">
 		{{csrf_field() }}
 
@@ -61,7 +61,7 @@
 					</div>
 
 					<div class="btn-group">
-						<a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+						<a class="btn bo" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
 						<a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
 						<a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
 						<a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
@@ -101,11 +101,11 @@
 					</div>
 				</div>
 
-				<div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true">
-					<textarea id="description" class="form-control" name="description" style="display:none;"></textarea>
-				</div>
+				<div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true"></div>
 
 				<textarea id="description" class="form-control" name="description" style="display:none;"></textarea>
+
+				<div class="ln_solid"></div>
 
 				{{-- <div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true"></div>
 

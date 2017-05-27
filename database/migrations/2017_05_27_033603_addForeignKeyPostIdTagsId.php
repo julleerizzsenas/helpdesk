@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeyTagsToPost extends Migration
+class AddForeignKeyPostIdTagsId extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddForeignKeyTagsToPost extends Migration
      */
     public function up()
     {
-        // Schema::table('posts', function (Blueprint $table) {                   
-        //     $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
-        // });
+        Schema::table('post_tag', function (Blueprint $table) {
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
+        });
     }
 
     /**

@@ -11,7 +11,7 @@
           <h2>Access denied</h2>
           <p>Full authentication is required to access this resource. <a href="{{URL::previous()}}">Go back</a>
           </p>
-          
+
         </div>
       </div>
     </div>

@@ -12,7 +12,8 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['index', 'show']);
+        $this->middleware('auth');
+        $this->posts=Post::all();
     }
 
     public function index()
@@ -22,13 +23,13 @@ class PostsController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
         
-        $posts = Post::all();
+        // $posts = Post::all();
         $totalposts = count($posts);
 
         $comments = Comment::all();
         $totalcomments = count($comments);
 
-        $tags = Tag::all();
+        $tags = Tag::distinct()->get();
         $totaltags = count($tags);
 
         return view('pages.dashboard',compact('posts', 'totalposts', 'totalcomments', 'totaltags'));

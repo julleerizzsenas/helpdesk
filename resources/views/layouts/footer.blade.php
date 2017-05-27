@@ -1,4 +1,4 @@
-<footer>
+<footer class="z">
 	<div class="pull-right">
 		Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
 	</div>
@@ -19,5 +19,8 @@
 
 <!-- Custom Theme Scripts -->
 <script src="{{asset('js/custom.min.js')}}"></script>
+<script data-rocketsrc="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js" type="text/rocketscript"></script>
+<script data-rocketsrc="../vendors/jquery.hotkeys/jquery.hotkeys.js" type="text/rocketscript"></script>
+<script data-rocketsrc="../vendors/google-code-prettify/src/prettify.js" type="text/rocketscript"></script>
 </body>
 </html>

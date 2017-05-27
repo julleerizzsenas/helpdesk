@@ -24,8 +24,8 @@
                 @endforeach
             </div>
         </div>
-    </div> 
-    <div class="col-md-12">
+    </div>
+    <div class="col-md-12"><br> 
         <div class="x_panel">
             <div class="x_title">
                 <h4>Tags</h4>

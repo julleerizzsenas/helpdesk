@@ -14,7 +14,7 @@
 
                         <form role="form" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
-                            <h1>Create Account</h1>
+                            <h3>Create Account</h3>
                             <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
 
                                 <input id="firstname" type="text" class="form-control" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autofocus>
@@ -81,7 +81,7 @@
                                 <br />
 
                                 <div>
-                                    <h1><i class="fa fa-paw"></i> Knowledge Base</h1>
+                                    <h3><i class="fa fa-paw"></i> Knowledge Base</h3>
                                     <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                                 </div>
                             </form>

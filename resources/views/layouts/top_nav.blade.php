@@ -4,20 +4,17 @@
   <div class="nav_menu">
     <nav>
       <div class="nav toggle">
-       <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-        </div>
-
-
-     
+        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+      </div>
 
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::guest())
-          <li><a href="{{ route('login') }}">Login</a></li>
-          <li><a href="{{ route('register') }}">Register</a></li>
+        <li><a href="{{ route('login') }}">Login</a></li>
+        <li><a href="{{ route('register') }}">Register</a></li>
         @else<li class="dropdown">
         <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           <img src="../images/download.png" alt="">
-            {{ Auth::user()->firstname. "  " .Auth::user()->lastname }}
+          {{ Auth::user()->firstname. "  " .Auth::user()->lastname }}
           <span class=" fa fa-angle-down"></span>
         </a>
         <ul class="dropdown-menu dropdown-usermenu pull-right">

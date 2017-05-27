@@ -1060,7 +1060,7 @@ h2 {
 .x_panel {
     position: relative;
     width: 100%;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     padding: 10px 17px;
     display: inline-block;
     background: #fff;
@@ -1701,11 +1701,11 @@ span.right {
     white-space: nowrap;
     position: relative
 }
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     footer {
         margin-left: 230px
     }
-}
+}*/
 @media (min-width: 992px) {
     .tile_count .tile_stats_count {
         margin-bottom: 10px;
@@ -4252,8 +4252,8 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     text-transform: uppercase;
 }
 
-footer {
-    margin-left:0;
+.z {
+    margin-left: 230px;
 }
 
 .a {
@@ -4275,6 +4275,13 @@ footer {
 .menu li{
   display: inline;
 }
+
+.bo{
+    font-weight: bold;
+
+}
+
+
 
 
 
