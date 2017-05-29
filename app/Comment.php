@@ -10,11 +10,6 @@ class Comment extends Model
 
 	public $timestamps = true;
 
-	// public function comments()
-	// {
-	// 	return $this->hasMany('App\Comment', 'post_id', 'id');
-	// }
-
 	public function posts()
 	{
 		return $this->belongsTo(Post::class, 'post_id');

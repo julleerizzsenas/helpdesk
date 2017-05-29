@@ -11,8 +11,8 @@
         </h2>
         <ul class="nav pull-right panel_toolbox">
           <li>{{$post->created_at->diffForHumans()}} &nbsp;</li>
-          <li><i class="fa fa-comments-o fa-lg" aria-hidden="true">{{$tcomments}}</i>&nbsp;&nbsp;&nbsp;</li>
-          <li><i class="fa fa-eye fa-lg">{{$ttags}}</i></li>
+          <li><i class="fa fa-comments-o fa-lg" aria-hidden="true">{{$post->comments->count()}}</i>&nbsp;&nbsp;&nbsp;</li>
+          <li><i class="fa fa-eye fa-lg">{{$post->tags->count()}}</i></li>
         </ul> 
         <div class="clearfix"></div>
       </div>

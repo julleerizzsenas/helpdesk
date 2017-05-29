@@ -12,9 +12,11 @@ class TagsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Tag $tag)
     {
-        // $posts = Tag::all();
+        // $posts = $tag->posts;
+
+        // return view('pages.show', compact('posts'));
     }
 
     /**
