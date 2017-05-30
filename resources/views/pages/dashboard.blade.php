@@ -8,31 +8,24 @@
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-file-text"></i></div>
-
         <div class="count">{{ $totalposts }}</div>
         <h3>Topics</h3>
-        <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
     </div>
 
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-comments-o"></i></div>
-
-
         <div class="count">{{ $totalcomments }}</div>
         <h3>Comments</h3>
-        <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
     </div>
 
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-tags"></i></div>
-
         <div class="count">{{ $totaltags }}</div>
         <h3>Tags</h3>
-        <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
     </div>
 
@@ -41,7 +34,6 @@
         <div class="icon"><i class="fa fa-line-chart"></i></div>
         <div class="count">179</div>
         <h3>Views</h3>
-        <p>Lorem ipsum psdea itgum rixt.</p>
       </div>
     </div>
 
@@ -60,8 +52,8 @@
           </a>
           <small> by {{ $post->user->firstname." ".$post->user->lastname }}</small></h2>
           <ul class="nav pull-right panel_toolbox">
-            <i class="fa fa-comments-o fa-lg green">25</i>&nbsp;&nbsp;&nbsp;
-            <i class="fa fa-eye fa-lg green">50</i>
+            <i class="fa fa-comments-o fa-lg green">{{$post->comments->count()}}</i>&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-eye fa-lg green">{{$post->tags->count()}}</i>
           </ul>             
           <div class="clearfix"></div>
         </div>

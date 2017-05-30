@@ -51,9 +51,15 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        // dd($request->get('description'));
+        //dd($request->all());
 
+        $this->validate($request,[
+            'topicname' => 'required',
+            'description' => 'required',
+            'tags' => 'required'
+            ]);
+
+        $tag = Tag::create(['name' => $request->get('tags')]);
 
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
@@ -62,17 +68,11 @@ class PostsController extends Controller
                                 'image' => 'test.jpg',
             ]);
 
-
+        $post->tags()->attach($tag->id);
 
         if($post)
         {
-            $tag = Tag::create([
-                                'name' => $request->get('tags'),
-                                'user_id' => auth()->user()->id
-            ]);
-
-            //$tags = false;
-
+            
             if($tag) 
             {
                 session()->flash(
@@ -101,11 +101,12 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        $tcomments = Comment::count('id');
+        // Post::join('comment', 'comment.post_id', '=', 'posts.id')
+        //     ->groupBy('posts.id')
+        //     ->get(['posts.*', Post::raw('count(*) as comments_count')]);
         
-        $ttags = Comment::count('id');
 
-        return view('layouts.filter', compact('post', 'tcomments', 'ttags'));
+        return view('layouts.filter', compact('post'));
     }
 
     /**
