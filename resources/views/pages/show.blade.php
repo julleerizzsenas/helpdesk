@@ -23,21 +23,22 @@
 
           <hr>
 
-          {{-- @if(count($post->tags))
+          @if(count($post->tags))
           <ul class="menu ul">
+            {{-- @foreach($tags as $key => $value) --}}
             @foreach($tags as $key => $value)
             <i class="fa fa-tag"></i>
             <li class="menu li">
               {{-- <a href="/posts/tags {{ $tag->name }}"> --}}<i class="green">
-                &nbsp;{{$value}}&nbsp;
-              </i>
-           {{--  </a> --}}
-          </li>
-          @endforeach
-        </ul>
-        @endif --}}
-      </div>
-</div>
+              &nbsp;{{$value}}&nbsp;
+            </i>
+          </a>
+        </li>
+        @endforeach
+      </ul>
+      @endif
+    </div>
+  </div>
 
 </div>
 </div>
@@ -53,64 +54,59 @@
         <small class="nav pull-right panel_toolbox">{{$comment->created_at->diffForHumans()}}</small>
         <hr>
 
-          <ul class="list-group">
-            @foreach($comment->replies as $reply)
-            <small><i class="green">&nbsp;&nbsp;{{ $reply->user->firstname." ".$reply->user->lastname }}:&nbsp;</i>
+        <ul class="list-group">
+          @foreach($comment->replies as $reply)
+          <small><i class="green">&nbsp;&nbsp;{{ $reply->user->firstname." ".$reply->user->lastname }}:&nbsp;</i>
             {{$reply->reply}}</small>
             <small class="nav pull-right panel_toolbox">{{$reply->created_at->diffForHumans()}}</small>
-            <br>
+            <hr>
             @endforeach
           </ul>
-        
-
-        {{-- Add Reply --}}
-            <form method="POST" action="/posts/{{$post->id}}/comments/replies">
-              {{csrf_field()}}
-              <div class="form-group col-md-8 col-xs-8">
-                <textarea type="text" name="reply" placeholder="Your reply here." class="form-control"></textarea>
-                <input type="hidden" name="comment" value="{{$comment->id}}">
-              </div>
-              <div class = "form-group">
-                <button type="submit" class="btn btn-primary">Reply</button>
-              </div>
-            </form>
+         {{-- Add Reply --}}
+          <form method="POST" action="/posts/{{$post->id}}/comments/replies">
+            {{csrf_field()}}
+            <div class="form-group col-md-8 col-xs-8">
+              <textarea type="text" name="reply" placeholder="Your reply here." class="form-control"></textarea>
+              <input type="hidden" name="comment" value="{{$comment->id}}">
+            </div>
+            <div class = "form-group">
+              <button type="submit" class="btn btn-primary">Reply</button>
+            </div>
+          </form>
           {{-- Add Reply --}}
-
-        
-
-      </li>
-      @endforeach
-    </ul>
-    <br>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-block">
-    <form method="POST" action="/posts/{{$post->id}}/comments">
-      {{csrf_field()}}
-      <div class="form-group">
-        <textarea name="comments" placeholder="Your comment here." class="form-control"></textarea>
-      </div>
-
+        </li>
+        @endforeach
+      </ul>
       <br>
-
-      <div class = "form-group">
-        <button type="submit" class="btn btn-primary">Add Comment</button>
-      </div>
-
-    @include('layouts.errors')  
-
-    </form>
+    </div>
   </div>
-</div>
 
-<div class="row pull-right">
-  <h4><u><a href="/dashboard"><i class="fa fa-long-arrow-left">&nbsp;</i>Return to Dashboard</a></u></h4>
-</div>
+  <div class="card">
+    <div class="card-block">
+      <form method="POST" action="/posts/{{$post->id}}/comments">
+        {{csrf_field()}}
+        <div class="form-group">
+          <textarea name="comments" placeholder="Your comment here." class="form-control"></textarea>
+        </div>
 
-{{-- </div> --}}
-@endsection
+        <br>
+
+        <div class = "form-group">
+          <button type="submit" class="btn btn-primary">Add Comment</button>
+        </div>
+
+        @include('layouts.errors')  
+
+      </form>
+    </div>
+  </div>
+
+  <div class="row pull-right">
+    <h4><u><a href="/dashboard"><i class="fa fa-long-arrow-left">&nbsp;</i>Return to Dashboard</a></u></h4>
+  </div>
+
+  {{-- </div> --}}
+  @endsection
 
 
 {{--       <div class="x_content">
@@ -127,17 +123,17 @@
 <ul class="dropdown-menu">
 <li>
 <a data-edit="fontSize 5">
-  <p style="font-size:17px">Huge</p>
+<p style="font-size:17px">Huge</p>
 </a>
 </li>
 <li>
 <a data-edit="fontSize 3">
-  <p style="font-size:14px">Normal</p>
+<p style="font-size:14px">Normal</p>
 </a>
 </li>
 <li>
 <a data-edit="fontSize 1">
-  <p style="font-size:11px">Small</p>
+<p style="font-size:11px">Small</p>
 </a>
 </li>
 </ul>
