@@ -58,7 +58,7 @@
             <small><i class="green">&nbsp;&nbsp;{{ $reply->user->firstname." ".$reply->user->lastname }}:&nbsp;</i>
             {{$reply->reply}}</small>
             <small class="nav pull-right panel_toolbox">{{$reply->created_at->diffForHumans()}}</small>
-            <hr>
+            <br>
             @endforeach
           </ul>
         
