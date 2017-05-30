@@ -16,7 +16,7 @@
             <div class="x_title">
                 <h4><b>Related Topics</b></h4>
             </div>
-            <div class="x_content">
+            <div class="x_content d">
                 @foreach ($posts as $post)
                     <a href="/posts/{{ $post->id }}">
                          {{ $post->topicname }}<hr>
@@ -30,7 +30,7 @@
             <div class="x_title">
                 <h4><b>Tags</b></h4>
             </div>
-            <div class="x_content pull-left">
+            <div class="x_content pull-left d">
                 @foreach ($tags as $tag)
                     <a href="/posts/tags/{{ $tag }}">  
                         {{ $tag->name }}<hr>
@@ -40,4 +40,5 @@
         </div>
     </div>
 </div>
+
 @endsection
