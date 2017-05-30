@@ -116,8 +116,12 @@
 		</div>
 
 		<div class="form-group">
-			<label for="tags">Tags:</label>	
-			<input type="text" class="form-control" id="tags" name="tags">
+			<label for="tags">Tags:</label>				
+			<select id="tags" name="tags" class="form-control" required>
+			@foreach($tags as $key => $value)
+			  <option value="{{$key}}">{{$value}}</option>	
+			@endforeach
+			</select>
 		</div>
 
 {{-- <input id="tags" name= "tags" type="text" class="tags form-control" data-tagsinput-init="true" style="display: none;">

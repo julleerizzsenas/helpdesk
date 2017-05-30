@@ -40,7 +40,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('pages.create');
+        $tags = Tag::pluck('name', 'id');
+
+        return view('pages.create',  compact('tags'));
     }
 
     /**
@@ -99,14 +101,15 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Post $post, Tag $tags)
     {
         // Post::join('comment', 'comment.post_id', '=', 'posts.id')
         //     ->groupBy('posts.id')
         //     ->get(['posts.*', Post::raw('count(*) as comments_count')]);
         
+        $tags = Tag::pluck('name', 'id');
 
-        return view('layouts.filter', compact('post'));
+        return view('layouts.filter', compact('post', 'tags'));
     }
 
     /**

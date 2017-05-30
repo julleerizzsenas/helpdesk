@@ -14,7 +14,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>Related Topics</h4>
+                <h4><b>Related Topics</b></h4>
             </div>
             <div class="x_content">
                 @foreach ($posts as $post)
@@ -28,7 +28,7 @@
     <div class="col-md-12 col-xs-12"><br> 
         <div class="x_panel">
             <div class="x_title">
-                <h4>Tags</h4>
+                <h4><b>Tags</b></h4>
             </div>
             <div class="x_content pull-left">
                 @foreach ($tags as $tag)

@@ -25,13 +25,13 @@
 
           {{-- @if(count($post->tags))
           <ul class="menu ul">
-            @foreach($post->tags as $tag)
+            @foreach($tags as $key => $value)
             <i class="fa fa-tag"></i>
             <li class="menu li">
-              <a href="/posts/tags {{ $tag->name }}"><i class="green">
-                {{ $tag->name }}&nbsp;&nbsp;&nbsp;
+              {{-- <a href="/posts/tags {{ $tag->name }}"> --}}<i class="green">
+                &nbsp;{{$value}}&nbsp;
               </i>
-            </a>
+           {{--  </a> --}}
           </li>
           @endforeach
         </ul>
@@ -98,6 +98,9 @@
       <div class = "form-group">
         <button type="submit" class="btn btn-primary">Add Comment</button>
       </div>
+
+    @include('layouts.errors')  
+
     </form>
   </div>
 </div>

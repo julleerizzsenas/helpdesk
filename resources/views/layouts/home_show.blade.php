@@ -6,7 +6,7 @@
         <ul class="nav pull-right panel_toolbox">
 
             <i class="fa fa-comments-o fa-lg green">&nbsp;{{$post->comments->count()}}</i>&nbsp;&nbsp;&nbsp;
-            <i class="fa fa-eye fa-lg green">&nbsp;3</i>
+            <i class="fa fa-eye fa-lg green">&nbsp;{{$post->tags->count()}}</i>
         </ul>             
         <div class="clearfix"></div>
     </div>
