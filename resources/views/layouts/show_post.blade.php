@@ -11,8 +11,8 @@
 
 
 						<ul class="nav pull-right panel_toolbox">
-							<i class="fa fa-comments-o fa-lg green">25</i>&nbsp;&nbsp;&nbsp;
-							<i class="fa fa-eye fa-lg green">50</i>
+							<i class="fa fa-comments-o fa-lg green">0</i>&nbsp;&nbsp;&nbsp;
+							<i class="fa fa-eye fa-lg green">3</i>
 						</ul>             
 						<div class="clearfix"></div>
 					</div>

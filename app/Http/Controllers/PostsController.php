@@ -6,13 +6,14 @@ use Carbon\Carbon;
 use App\Tag;
 use App\Post;
 use App\Comment;
+use App\Reply;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['show']);
     }
 
     public function index()

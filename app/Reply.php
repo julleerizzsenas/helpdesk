@@ -4,25 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class Reply extends Model
 {
 	protected $guarded = [];
 
 	public $timestamps = true;
 
-	public function posts()
+    public function comment()
 	{
-		return $this->belongsTo(Post::class, 'post_id');
+		return $this->belongsTo(Comment::class, 'comment_id');
 	}
 
 	public function user()
 	{
 		return $this->belongsTo(User::class, 'user_id');
-
 	}
-
-	public function replies()
-    {
-        return $this->hasMany(Reply::class);
-    }
 }

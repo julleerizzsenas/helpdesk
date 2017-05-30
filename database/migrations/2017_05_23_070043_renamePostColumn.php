@@ -13,10 +13,10 @@ class RenamePostColumn extends Migration
      */
     public function up()
     {
-        // Schema::table('posts', function (Blueprint $table) {
-        //     $table->string('user_id')->after('description');
-        //     $table->renameColumn('user', 'user_id');
-        // });
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('user_id')->after('description');
+            $table->renameColumn('user', 'user_id');
+        });
     }
 
     /**

@@ -13,9 +13,9 @@ class AddForeignKeyTagsToPost extends Migration
      */
     public function up()
     {
-        // Schema::table('posts', function (Blueprint $table) {                   
-        //     $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
-        // });
+        Schema::table('posts', function (Blueprint $table) {                   
+            $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 
     /**
