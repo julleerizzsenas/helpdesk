@@ -13,7 +13,7 @@ class ReplyTable extends Migration
      */
     public function up()
     {
-        Schema::create('reply', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('comment_id')->unsigned();
             $table->text('reply');

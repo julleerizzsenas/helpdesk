@@ -23,7 +23,7 @@
 
           <hr>
 
-          {{-- @if(count($post->tags))
+          @if(count($post->tags))
           <ul class="menu ul">
             @foreach($tags as $key => $value)
             <i class="fa fa-tag"></i>
@@ -31,11 +31,11 @@
               {{-- <a href="/posts/tags {{ $tag->name }}"> --}}<i class="green">
                 &nbsp;{{$value}}&nbsp;
               </i>
-           {{--  </a> --}}
+            </a>
           </li>
           @endforeach
         </ul>
-        @endif --}}
+        @endif
       </div>
 </div>
 

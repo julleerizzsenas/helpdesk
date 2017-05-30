@@ -19,4 +19,9 @@ class Tag extends Model
     {
     	return $this->belongsTo(User::class, 'user');
     }
+    
+    public function getRouteKeyName()
+    {
+    	return 'name';
+    }
 }
