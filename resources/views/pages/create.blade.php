@@ -18,7 +18,7 @@
 <hr>
 
 
-<div class="col-md-12 blog-main">
+<div class="col-md-12 col-xs-12 blog-main">
 	<form method = "POST" action = "/posts">
 		{{csrf_field() }}
 
@@ -112,7 +112,7 @@
 				{{-- <div id="editor-one" class="editor-wrapper placeholderText" contenteditable="true"></div>
 
 				<textarea id="description" class="form-control" name="description" style="display:none;"></textarea> --}}
-			</div>
+			{{-- </div> --}}
 		</div>
 
 		<div class="form-group">

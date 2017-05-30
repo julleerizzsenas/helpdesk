@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12"><br> 
+    <div class="col-md-12 col-xs-12"><br> 
         <div class="x_panel">
             <div class="x_title">
                 <h4>Tags</h4>

@@ -6,13 +6,14 @@ use Carbon\Carbon;
 use App\Tag;
 use App\Post;
 use App\Comment;
+use App\Reply;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['show']);
     }
 
     public function index()
@@ -50,7 +51,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+        // dd($request->all());
         // dd($request->get('description'));
 
 
@@ -66,7 +67,6 @@ class PostsController extends Controller
         if($post)
         {
             $tag = Tag::create([
-                                'post_id' => $post->id,
                                 'name' => $request->get('tags'),
                                 'user_id' => auth()->user()->id
             ]);
