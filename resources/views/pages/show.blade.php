@@ -52,22 +52,23 @@
         <small class="nav pull-right panel_toolbox">{{$comment->created_at->diffForHumans()}}</small>
         <hr>
 
-        <ul class="list-group">
+        <ul class="list-group col-md-8 col-xs-8">
           @foreach($comment->replies as $reply)
-          <small><i class="green">&nbsp;&nbsp;{{ $reply->user->firstname." ".$reply->user->lastname }}:&nbsp;</i>
+          <small><i class="blue">&nbsp;&nbsp;&nbsp;{{ $reply->user->firstname." ".$reply->user->lastname }}:&nbsp;</i>
             {{$reply->reply}}</small>
             <small class="nav pull-right panel_toolbox">{{$reply->created_at->diffForHumans()}}</small>
             <hr>
             @endforeach
           </ul>
          {{-- Add Reply --}}
+         
           <form method="POST" action="/posts/{{$post->id}}/comments/replies">
             {{csrf_field()}}
-            <div class="form-group col-md-8 col-xs-8">
+            <div class="form-group col-md-7 col-xs-7">
               <textarea type="text" name="reply" placeholder="Your reply here." class="form-control"></textarea>
               <input type="hidden" name="comment" value="{{$comment->id}}">
             </div>
-            <div class = "form-group">
+            <div class = "form-group col-md-5 col-xs-5">
               <button type="submit" class="btn btn-primary">Reply</button>
             </div>
           </form>
