@@ -25,11 +25,11 @@
 
           @if(count($post->tags))
           <ul class="menu ul">
-            @foreach($tags as $key => $value)
+            @foreach($post->tags as $key => $value)
             <i class="fa fa-tag"></i>
             <li class="menu li">
-              {{-- <a href="/posts/tags {{ $tag->name }}"> --}}<i class="green">
-              &nbsp;{{$value}}&nbsp;
+              <a href="/posts/tags/{{ $value->name }}"><i class="green">
+              &nbsp;{{$value->name}}&nbsp;
             </i>
           </a>
         </li>
@@ -64,7 +64,7 @@
           <form method="POST" action="/posts/{{$post->id}}/comments/replies">
             {{csrf_field()}}
             <div class="form-group col-md-8 col-xs-8">
-              <textarea type="text" name="reply" placeholder="Your reply here." class="form-control"></textarea>
+              <textarea type="text" name="reply" placeholder="Your reply here." class="form-control" required></textarea>
               <input type="hidden" name="comment" value="{{$comment->id}}">
             </div>
             <div class = "form-group">
@@ -84,7 +84,7 @@
       <form method="POST" action="/posts/{{$post->id}}/comments">
         {{csrf_field()}}
         <div class="form-group">
-          <textarea name="comments" placeholder="Your comment here." class="form-control"></textarea>
+          <textarea name="comments" placeholder="Your comment here." class="form-control" required></textarea>
         </div>
 
         <br>

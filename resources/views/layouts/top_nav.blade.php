@@ -13,7 +13,7 @@
         <li><a href="{{ route('register') }}">Register</a></li>
         @else<li class="dropdown">
         <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-          <img src="../images/download.png" alt="">
+          <img src="/images/download.png" alt="">
           {{ Auth::user()->firstname. "  " .Auth::user()->lastname }}
           <span class=" fa fa-angle-down"></span>
         </a>

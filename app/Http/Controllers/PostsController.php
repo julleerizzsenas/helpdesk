@@ -23,11 +23,8 @@ class PostsController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
         
-
         $totalposts = Post::count('id');
-
         $totalcomments = Comment::count('id');
-       
         $totaltags = Tag::count('id');
        
         return view('pages.dashboard',compact('posts', 'totalposts','totalcomments', 'totaltags'));
@@ -40,7 +37,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        $tags = Tag::pluck('name', 'id');
+        $tags = Tag::pluck('name');
 
         return view('pages.create',  compact('tags'));
     }
@@ -101,15 +98,13 @@ class PostsController extends Controller
      * @param  \App\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post, Tag $tags)
+    public function show(Post $post)
     {
         // Post::join('comment', 'comment.post_id', '=', 'posts.id')
         //     ->groupBy('posts.id')
         //     ->get(['posts.*', Post::raw('count(*) as comments_count')]);
-        
-        $tags = Tag::pluck('name', 'id');
 
-        return view('layouts.filter', compact('post', 'tags'));
+        return view('layouts.filter', compact('post'));
     }
 
     /**

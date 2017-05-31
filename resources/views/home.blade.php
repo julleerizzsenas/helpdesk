@@ -32,7 +32,7 @@
             </div>
             <div class="x_content pull-left d">
                 @foreach ($tags as $tag)
-                    <a href="/posts/tags/{{ $tag }}">  
+                    <a href="/posts/tags/{{ $tag->name }}">  
                         {{ $tag->name }}<hr>
                     </a>
                 @endforeach      

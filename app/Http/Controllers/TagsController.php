@@ -14,9 +14,10 @@ class TagsController extends Controller
      */
     public function index(Tag $tag)
     {
+        $posts = Tag::all();
         $posts = $tag->posts;
 
-        return view('pages.dashboard', compact('posts'));
+        return view('pages.tags', compact('posts'));
     }
 
     /**
