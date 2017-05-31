@@ -1,5 +1,5 @@
 
-<footer class="de">
+<footer class="bg-footer">
   <div class="container text-center upper"><br>
     <div class="row">
       <div class="col-md-3 col-xs-3">
@@ -11,7 +11,21 @@
         <a href><span class="fa fa-twitter-square fa-3x f"></span></a>
       </div>
       <div class="col-md-3 col-xs-3">
-        <a href="#" class="f">Team</a>
+        <a href="#" class="f">Team</a><br>
+        <div class="row">
+          {{-- <div class="col-md-6"> --}}
+            <div class="profile_pic">
+              <img src="/images/person.png" class="img-circle profile_img">
+              <p> Gem Elaine H. Alob </p>
+            {{-- </div> --}}
+          </div>&nbsp;
+          {{-- <div class="col-md-6"> --}}
+            <div class="profile_pic">
+              <img src="/images/person.png" class="img-circle profile_img">
+              <p> Julleerizz Queen Lovestarr T. Senas </p>
+            {{-- </div> --}}
+          </div>
+        </div>
       </div>
       <div class="col-md-3 col-xs-3">
         <a href="#" class="f">Location</a><br><br>
