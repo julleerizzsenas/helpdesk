@@ -53,7 +53,7 @@
 				<a class="btn" title="Insert picture (or just drag & drop)" id="image"><i class="fa fa-picture-o"></i></a>
 				<input type="file" data-role="magic-overlay" data-target="#image" data-edit="image" />
 			</div>
-		</div>
+		</div><br>
 
 		<div class = "form-group">
 			<button type="submit" class="btn btn-primary">Publish</button>

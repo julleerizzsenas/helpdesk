@@ -3,7 +3,7 @@
 <body>
   <div class="container body">
     <div class="main_container">
-      <nav class=" nav-header navbar-fixed-top">
+      <nav class="nav-header navbar-fixed-top">
         <div class="nav_menu c" id="nav">
           <ul>
             <li><a class="c" href="#"><b>Issue Tracker</b></a></li>
@@ -18,8 +18,10 @@
         <a href="#navPanel" class="toggle"></a>
       </div>
       <div id="navPanel">
-      <nav>
-      <a class="link depth-0" href="#">Home</a>
+      <a class="link depth-0" href="#">Issue Tracker</a>
+      <a class="link depth-0" href="#">Helpdesk</a>
+      <a class="link depth-0" href="#">About Us</a>
+      <a class="link depth-0" href="#">Contact Us</a>
       </nav>
       </div> --}}
 
@@ -28,7 +30,7 @@
       <br><br>
       <div class="bg-title text-center col-md-12 col-xs-12"><br><br><br><br>
         <div class="clearfix"></div>
-        <h1 class="upper deco">Knowledge Base</h1><br><br>
+        <h1 class="upper deco col-md-12 col-xs-12">Knowledge Base</h1><br><br>
         <h3>coreDev Solutions, Inc.</h3><br><br>
         <div class="center">
           @if(auth()->check())

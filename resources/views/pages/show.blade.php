@@ -23,22 +23,21 @@
 
           <hr>
 
-          @if(count($post->tags))
+          @if($post->tags)
           <ul class="menu ul">
             @foreach($post->tags as $key => $value)
             <i class="fa fa-tag"></i>
             <li class="menu li">
               <a href="/posts/tags/{{ $value->name }}"><i class="green">
-              &nbsp;{{$value->name}}&nbsp;
-            </i>
-          </a>
-        </li>
-        @endforeach
-      </ul>
-      @endif
+              &nbsp;{{$value->name}}&nbsp;</i>
+            </a>
+          </li>
+          @endforeach
+        </ul>
+        @endif
+      </div>
     </div>
   </div>
-</div>
 </div>
 </div>
 
@@ -60,11 +59,11 @@
             <hr>
             @endforeach
           </ul>
-         {{-- Add Reply --}}
-         
+          {{-- Add Reply --}}
+
           <form method="POST" action="/posts/{{$post->id}}/comments/replies">
             {{csrf_field()}}
-            <div class="form-group col-md-8 col-xs-8">
+            <div class="form-group col-md-7 col-xs-7">
               <textarea type="text" name="reply" placeholder="Your reply here." class="form-control" required></textarea>
               <input type="hidden" name="comment" value="{{$comment->id}}">
             </div>
