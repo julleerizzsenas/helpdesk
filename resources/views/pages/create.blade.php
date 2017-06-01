@@ -32,13 +32,18 @@
         	<textarea name="description" id="description" class="form-control" required></textarea>
 		</div>
 
-		<div class="form-group">
+{{-- 		<div class="form-group">
 			<label for="tags">Tags:</label>				
 			<select id="tags" name="tags" class="form-control" required>
 			@foreach($tags as $key => $value)
 			  <option value="{{$key}}">{{$value}}</option>	
 			@endforeach
 			</select>
+		</div> --}}
+
+		<div class="form-group">
+			<label for="tags">Tags:</label>				
+			<input type="text" id="tags" name="tags" class="tm-input form-control tm-input-info"/>
 		</div>
 
 		<div class="form-group">
@@ -57,6 +62,11 @@
 		@include('layouts.errors')
 
 	</form>
+
+	<script type="text/javascript">
+			$(".tm-input").tagsManager();
+	</script>
+
 </div>
 
 @endsection

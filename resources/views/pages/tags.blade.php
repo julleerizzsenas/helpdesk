@@ -1,9 +1,10 @@
 @extends('layouts.master')
-@section('title' , 'Dashboard')
+@section('title' , 'Tags')
 
 @section('content')
 
 <div class="row">
+    <h3>{{$tag->name}}<hr /></h3>
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
 

@@ -17,7 +17,7 @@ class TagsController extends Controller
         $posts = Tag::all();
         $posts = $tag->posts;
 
-        return view('pages.tags', compact('posts'));
+        return view('pages.tags', compact('posts', 'tag'));
     }
 
     /**

@@ -1,4 +1,5 @@
 @extends('layouts.home_master')
+@section('title' , 'Home')
 
 @section('content')
     <div class="col-md-9 dashboard_graph">
