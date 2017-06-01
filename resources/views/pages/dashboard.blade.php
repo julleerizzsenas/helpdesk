@@ -9,7 +9,7 @@
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-file-text"></i></div>
         <div class="count">{{ $totalposts }}</div>
-        <h3>Topics</h3>
+        <h3><a href="">Topics</a></h3>
       </div>
     </div>
 
@@ -25,7 +25,7 @@
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-tags"></i></div>
         <div class="count">{{ $totaltags }}</div>
-        <h3>Tags</h3>
+        <h3><a href="">Tags</a></h3>
       </div>
     </div>
 
@@ -45,7 +45,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
 
-      @foreach ($posts as $post)
+      @foreach ($posts->slice(0, 5) as $post)
 
       <div class="x_title">
         <a href="/posts/{{ $post->id }}">
@@ -64,7 +64,16 @@
               <li>
                 <div class="block">
                   <div class="block_content">
-                    <p>{{ $post->description }}
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ str_limit($post->description, $limit = 300, $end = ' ...') }}
+                    @if((str_limit($post->description)) > $limit)
+                    <a href="/posts/{{ $post->id }}">
+                      <b><i>More</i></b>
+                     </a>
+                     @else
+                     <a href="/posts/{{ $post->id }}">
+                      <b><i>Read more</i></b>
+                     </a>
+                     @endif
                       <p class="pull-right"> Date Published: <i class="green">{{ $post->created_at->toFormattedDateString() }}</i></p>
                     </p>
                     <br>

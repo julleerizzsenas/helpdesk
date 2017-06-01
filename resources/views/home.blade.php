@@ -5,7 +5,7 @@
     <div class="col-md-9 dashboard_graph">
         <div class="col-md-12">
             <div class="x_panel">
-                @foreach ($posts as $post)
+                @foreach ($posts->slice(0, 5) as $post)
                   @include ('layouts.home_show')
                 @endforeach
             </div>
@@ -15,10 +15,10 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4><b>Related Topics</b></h4>
+                <h4><b>Topics</b></h4>
             </div>
             <div class="x_content d">
-                @foreach ($posts as $post)
+                @foreach ($posts->slice(0, 5) as $post)
                     <a href="/posts/{{ $post->id }}">
                          {{ $post->topicname }}<hr>
                     </a>
@@ -32,7 +32,7 @@
                 <h4><b>Tags</b></h4>
             </div>
             <div class="x_content pull-left d">
-                @foreach ($tags as $tag)
+                @foreach ($tags->slice(0, 5) as $tag)
                     <a href="/posts/tags/{{ $tag->name }}">  
                         {{ $tag->name }}<hr>
                     </a>

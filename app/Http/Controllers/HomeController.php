@@ -28,6 +28,7 @@ class HomeController extends Controller
         $posts = Post::latest()
             ->filter(request(['month', 'year']))
             ->get();
+
         $tags = Tag::all();
 
         return view('home', compact('posts', 'tags'));      
