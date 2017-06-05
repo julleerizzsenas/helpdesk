@@ -29,11 +29,11 @@ class Post extends Model
  	{
 
  		if ($month = $filters['month']){
-            $query->whereMonth('updated_at', Carbon::parse($month)->month);
+            $query->whereMonth('created_at', Carbon::parse($month)->month);
         }
 
          if ($year = $filters['year']){
-            $query->whereYear('updated_at', $year);
+            $query->whereYear('created_at', $year);
         }
  	}
     

@@ -44,7 +44,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
 
-      @foreach ($posts->slice(0, 5) as $post)
+      @foreach ($posts->slice(0, 10) as $post)
 
       <div class="x_title">
         <a href="/posts/{{ $post->id }}">
@@ -64,15 +64,9 @@
                 <div class="block">
                   <div class="block_content">
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ str_limit($post->description, $limit = 300, $end = ' ...') }}
-                    @if((str_limit($post->description)) > $limit)
-                    <a href="/posts/{{ $post->id }}">
-                      <b><i>More</i></b>
-                     </a>
-                     @else
                      <a href="/posts/{{ $post->id }}">
                       <b><i>Read more</i></b>
                      </a>
-                     @endif
                       <p class="pull-right"> Date Published: <i class="green">{{ $post->created_at->toFormattedDateString() }}</i></p>
                     </p>
                     <br>
