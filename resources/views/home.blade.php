@@ -12,7 +12,7 @@
         </div>
     </div>  
     <div class="col-md-3 dashboard_graph">          
-    <div class="col-md-12">
+    <div class="col-md-12 col-xs-6">
         <div class="x_panel">
             <div class="x_title">
                 <h4><b>Topics</b></h4>
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 col-xs-12"><br> 
+    <div class="col-md-12 col-xs-6"><br> 
         <div class="x_panel">
             <div class="x_title">
                 <h4><b>Tags</b></h4>

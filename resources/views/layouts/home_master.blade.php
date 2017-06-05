@@ -28,17 +28,17 @@
 
 
       <br><br>
-      <div class="bg-title text-center col-md-12 col-xs-12"><br><br><br><br>
+      <div class="bg-title text-center col-md-12 col-xs-12"><br><br><br><br><br>
         <div class="clearfix"></div>
         <h1 class="upper deco col-md-12 col-xs-12">Knowledge Base</h1><br><br>
-        <h3>coreDev Solutions, Inc.</h3><br><br>
+        <h3>coreDev Solutions, Inc.</h3><br><br><br>
         <div class="center">
           @if(auth()->check())
             <a type="button" class="btn btn-info" href="/dashboard">Dashboard</a>
           @else
             <a type="button" class="btn btn-info" href="/login">Login Now</a>
           @endif
-        </div><br><br><br><br>
+        </div><br><br><br><br><br><br>
       </div>
       <div class="x_panel">
         @yield('content')

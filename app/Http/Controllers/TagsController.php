@@ -49,7 +49,7 @@ class TagsController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view('layouts.tags', compact('tag'));
     }
 
     /**

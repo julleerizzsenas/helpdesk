@@ -27,9 +27,3 @@ Route::post('posts/{post}/comments/replies', 'ReplyController@store');
 Route::resource('posts', 'PostsController');
 Route::resource('posts/tags/{tag}', 'TagsController');
 Route::resource('posts/{id}', 'PostsController');
-
-
-
-
-
-
