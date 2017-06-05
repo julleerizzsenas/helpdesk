@@ -49,17 +49,28 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //dd($request->all());
+    {/*
+        dd($request->all());*/
 
-        $this->validate($request,[
+        $hidden = $request->get('hidden-tags');
+
+        $tagsdata = explode(',',$hidden);
+
+        $tagarray = [];
+
+        /*$this->validate($request,[
             'topicname' => 'required',
             'description' => 'required',
             'tags' => 'required'
-            ]);
+            ]);*/
 
-        $tag = Tag::create(['name' => $request->get('tags')]);
+        for($s =0;$s < count($tagsdata);$s++)
+        {
+            $tag = Tag::create(['name' => $tagsdata[$s]]);
+            $tagarray[] = $tag->id;
+        }
 
+            
         $post = Post::create([
                                 'topicname' => $request->get('topicname'),
                                 'description' => $request->get('description'),
@@ -67,7 +78,15 @@ class PostsController extends Controller
                                 'image' => 'test.jpg',
             ]);
 
-        $post->tags()->attach($tag->id);
+        
+
+      
+        
+       for($i = 0; $i <count($tagarray); $i++) 
+        {  
+            $post->tags()->attach($tagarray[$i]); 
+        } 
+
 
         if($post)
         {
