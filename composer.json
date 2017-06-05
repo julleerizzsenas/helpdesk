@@ -9,6 +9,7 @@
         "doctrine/dbal": "^2.5",
         "filp/whoops": "^2.1",
         "httpoz/roles": "^2.2",
+        "kryptonit3/counter": "5.2.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "rtconner/laravel-tagging": "~2.2"

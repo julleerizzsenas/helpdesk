@@ -9,7 +9,7 @@
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-file-text"></i></div>
         <div class="count">{{ $totalposts }}</div>
-        <h3><a href="">Topics</a></h3>
+        <h3>Topics</h3>
       </div>
     </div>
 
@@ -25,14 +25,14 @@
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-tags"></i></div>
         <div class="count">{{ $totaltags }}</div>
-        <h3><a href="">Tags</a></h3>
+        <h3>Tags</h3>
       </div>
     </div>
 
     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
       <div class="tile-stats">
         <div class="icon"><i class="fa fa-line-chart"></i></div>
-        <div class="count">179</div>
+        <div class="count">123</div>
         <h3>Views</h3>
       </div>
     </div>
@@ -45,7 +45,7 @@
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
 
-      @foreach ($posts->slice(0, 10) as $post)
+      @foreach ($posts as $post)
 
       <div class="x_title">
         <a href="/posts/{{ $post->id }}">
@@ -80,7 +80,9 @@
 
 
         @endforeach
+        {{ $posts->links() }}
       </div>
+
     </div>
   </div>
 @endsection

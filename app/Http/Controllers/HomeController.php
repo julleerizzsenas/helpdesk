@@ -29,6 +29,8 @@ class HomeController extends Controller
             ->filter(request(['month', 'year']))
             ->get();
 
+        $posts = Post::paginate(5);
+
         $tags = Tag::all();
 
         return view('home', compact('posts', 'tags'));      
