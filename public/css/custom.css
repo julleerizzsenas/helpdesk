@@ -324,9 +324,9 @@ html , body{
     float: left;
     background: #EDEDED;
     border-bottom: 1px solid #D9DEE4;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     width: 100%;
-    position: relative
+    position: relative;
 }
 @media (min-width: 480px) {
     .nav_menu {
@@ -642,7 +642,7 @@ h1,
     margin-top: 10px;
     margin-bottom: 10px;
     color: #ffffff;
-    font-size: 63px;
+    font-size: 50px;
 }
 h2,
 .h2,
@@ -678,7 +678,7 @@ a:focus {
     margin-bottom: 0
 }
 .navbar-header {
-    background: #34495E
+    /*background: #EDEDED*/
 }
 .navbar-right {
     margin-right: 0
@@ -806,11 +806,19 @@ a:focus {
     background: linear-gradient(#334556, #2C4257), #2A3F54;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0
 }
-.navbar-brand,
+.navbar-brand{
+    float: left;
+    /*padding: 0px 0px;    */ padding: 2px 5px 2px 20px; 
+    margin-left: 50px;
+    font-size: 18px;
+    line-height: 22px;
+    height: 50px;
+    color: #73879C !important;
+}
 .navbar-nav>li>a {
     font-weight: 500;
     color: #ECF0F1 !important;
-    margin-left: 0 !important;
+    margin-left: 10px !important;
     line-height: 32px
 }
 .site_title {
@@ -832,7 +840,7 @@ a:focus {
     text-decoration: none
 }
 .nav.navbar-nav>li>a {
-    color: #515356 !important
+    color: #515356 !important;
 }
 .nav.top_menu>li>a {
     position: relative;
@@ -4261,10 +4269,23 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     border:solid 1px red;
 }
 
-.bg-title {
+/*.bg-title {
 
     background-image: url("https://images.unsplash.com/photo-1449100840062-49e9aca7c8ec?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=");
+}*/
+
+/*home background img*/
+.bg-overlay{
+    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url("https://images.unsplash.com/photo-1449100840062-49e9aca7c8ec?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    /*height: 500px;*/
+    width: 100%;
+    /*padding-top:  50px; */
 }
+
 
 .menu ul{
   list-style: none;
@@ -4297,81 +4318,29 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 
 h1.deco{
     font-family: "Times New Roman", Times, serif;
-    font-size: 90px;
+    font-size: 80px;
+    padding: 1em 0 1em 0;
 }
 
-#nav {
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
+
+/*.navbar-header-home {
+     background: #EDEDED;
+}
+
+.nav-header-home{
+    float: left;
+    background: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
+    margin-bottom: 10px;
     width: 100%;
-    text-align: center;
-    display: inline-block;
-    padding: 1.5em 0 1.5em 0;
-    /*z-index: 1;*/
-    /*overflow: hidden;*/
-}
-#nav > ul {
-    line-height: 0px;
     position: relative;
-    display: inline-block;
-    margin: 0;
-    height: 21px;
-    border-left: solid 1px rgba(192, 192, 192, 0.35);
-    border-right: solid 1px rgba(192, 192, 192, 0.35);}
-
-#nav > ul > li {
-                display: inline-block;
-                margin: -9px 0.5em 0 0.5em;
-                /*border-radius: 0.5em;*/
-                padding: 0.85em;
-                border: solid 1px transparent;
-                /*-moz-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;*/
-                /*-webkit-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;*/
-                /*-ms-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;*/
-                /*transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;*/
-            }
-#navButton .toggle {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    border: 0;
-                    outline: 0;
-                }
-
-/* #navPanel, #titleBar {
-display: none;
+}
+@media (min-width: 480px) {
+    .nav-header-home{
+        position: static
     }
-
-    @media screen and (max-width: 200px) {
-
-        /* Basic */
-
-  /*          html, body {
-                overflow-x: hidden;
-            }
-
-            body, input, textarea, select {
-                font-size: 12.5pt;
-                line-height: 1.5em;
-            }
-
-            h2 {
-                font-size: 1.75em;
-            }
-
-            h3 {
-                font-size: 1.25em;
-            }
-
-            hr {
-                top: 3em;
-                margin-bottom: 6em;
-            }
+}
 */
-
 
 
 

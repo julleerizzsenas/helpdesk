@@ -63,33 +63,12 @@
 		@include('layouts.errors')
 
 	</form>
+	
 	<script type="text/javascript">
 				$(".tm-input").tagsManager();
 				$('.tagsdata').val()=$('#tags').tagsinput('item');
 
 	</script>
-
-
-
-	{{-- <script type="text/javascript">
-	  $(document).ready(function() {
-	    var tagApi = $(".tm-input").tagsManager();
-
-	    jQuery(".typeahead").typeahead({
-	      name: 'tags',
-	      displayKey: 'name',
-	      source: function (query, process) {
-	        return $.get('ajaxpro.php', { query: query }, function (data) {
-	          data = $.parseJSON(data);
-	          return process(data);
-	        });
-	      },
-	      afterSelect :function (item){
-	        tagApi.tagsManager("pushTag", item);
-	      }
-	    });
-	  });
-	</script> --}}
 
 </div>
 @endsection

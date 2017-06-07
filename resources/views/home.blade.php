@@ -5,9 +5,11 @@
     <div class="col-md-9 dashboard_graph">
         <div class="col-md-12">
             <div class="x_panel">
-                @foreach ($posts->slice(0, 5) as $post)
+                @foreach ($posts as $post)
                   @include ('layouts.home_show')
                 @endforeach
+        {{ $posts->links() }}
+
             </div>
         </div>
     </div>  
@@ -33,7 +35,7 @@
             </div>
             <div class="x_content pull-left d">
                 @foreach ($tags->slice(0, 5) as $tag)
-                    <a href="/posts/tags/{{ $tag->name }}">  
+                    <a href="/posts/tags/{{ $tag->name }}">
                         {{ $tag->name }}<hr>
                     </a>
                 @endforeach      

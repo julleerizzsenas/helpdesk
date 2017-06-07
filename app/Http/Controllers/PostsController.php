@@ -18,11 +18,12 @@ class PostsController extends Controller
 
     public function index()
     {
-
         $posts = Post::latest()
             ->filter(request(['month', 'year']))
             ->get();
-        
+     
+        $posts = Post::paginate(5);
+
         $totalposts = Post::count('id');
         $totalcomments = Comment::count('id');
         $totaltags = Tag::count('id');
