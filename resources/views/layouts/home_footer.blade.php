@@ -1,13 +1,11 @@
-
 <footer class="bg-footer">
-  <div class="container text-center upper"><br>
+  <div class="container text-center"><br>
     <div class="row">
       <div class="col-md-3 col-xs-3">
-        <a href="#" class="f">About Us<br>
-        <div class="profile_pic">
+        <a href="#" class="f">About Us<br></a>
+        <div class="logo_pic">
             <img src="/images/logo.png" class="img-circle profile_img">
-          </div>
-        </a>
+        </div>
       </div>
       <div class="col-md-3 col-xs-3">
         <a href="#" class="f">Team</a><br>
@@ -28,15 +26,14 @@
       </div>
       <div class="col-md-3 col-xs-3">
         <a href="#" class="f">Location</a><br><br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.532814973258!2d123.88686241439461!3d10.299175492646436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99955997c9a71%3A0x7f08f824b1ab47f9!2sCoreDev+Solutions+Inc.!5e0!3m2!1sen!2sph!4v1495438325592" width="250" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.532814973258!2d123.88686241439461!3d10.299175492646436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99955997c9a71%3A0x7f08f824b1ab47f9!2sCoreDev+Solutions+Inc.!5e0!3m2!1sen!2sph!4v1495438325592" width="200" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="col-md-3 col-xs-3">
         <a href="#" class="f">Contact Us</a><br><br>
-        <a href><span class="fa fa-external-link-square fa-3x f"></span></a>&nbsp;
-        <a href><span class="fa fa-facebook-square fa-3x f"></span></a>&nbsp;
-        <a href><span class="fa fa-github-square fa-3x f"></span></a>&nbsp;
-        <a href><span class="fa fa-google-plus-square fa-3x f"></span></a>&nbsp;
-        <a href><span class="fa fa-twitter-square fa-3x f"></span></a>
+        <a href target="_blank"><span class="fa fa-facebook-square fa-3x f"></span></a>&nbsp;
+        <a href target="_blank"><span class="fa fa-github-square fa-3x f"></span></a>&nbsp;
+        <a href target="_blank"><span class="fa fa-google-plus-square fa-3x f"></span></a>&nbsp;
+        <a href target="_blank"><span class="fa fa-twitter-square fa-3x f"></span></a>
       </div>
     </div>
   </footer>

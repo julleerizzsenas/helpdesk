@@ -8,8 +8,7 @@
                 @foreach ($posts as $post)
                   @include ('layouts.home_show')
                 @endforeach
-        {{ $posts->links() }}
-
+                    {{ $posts->links() }}
             </div>
         </div>
     </div>  

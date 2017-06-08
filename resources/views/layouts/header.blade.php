@@ -31,6 +31,10 @@
     <!-- Custom Theme Style -->
     <link href="/css/custom.css" rel="stylesheet">
     
+    {{-- Font --}}
+    <link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+
 
     
 </head>

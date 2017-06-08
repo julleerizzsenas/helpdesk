@@ -489,10 +489,10 @@ body .container.body .right_col {
 body {
     color: #73879C;
     background: #2A3F54;
-    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
-    font-size: 13px;
+    font: 400 17px/1.6 'Gudea', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.471
+    line-height: 1.5
 }
 .main_container .top_nav {
     display: block;
@@ -4276,7 +4276,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 
 /*home background img*/
 .bg-overlay{
-    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url("https://images.unsplash.com/photo-1449100840062-49e9aca7c8ec?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") fixed;
+    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url("https://daone2s8c6erh.cloudfront.net/2017/05/cup-of-coffee-laptop-office-macbook-89786.jpeg") fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -4317,11 +4317,15 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 }
 
 h1.deco{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 80px;
+    font: 400 95px/1.1 'Rancho', Georgia, serif;
     padding: 1em 0 1em 0;
 }
 
+.logo_pic {
+    width: 55%;
+    float: left;
+    margin-left: 20px;
+}
 
 /*.navbar-header-home {
      background: #EDEDED;

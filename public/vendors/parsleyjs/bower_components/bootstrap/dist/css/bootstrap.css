@@ -4702,12 +4702,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #466289;
+  border-color: #466289;
 }
 
 .navbar-default .navbar-brand {
-  color: #777777;
+  color: #466289;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -4734,7 +4734,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #e7e7e7;
+  background-color: #466289;
 }
 
 .navbar-default .navbar-nav > .disabled > a,

@@ -79,13 +79,9 @@ class PostsController extends Controller
                                 'image' => 'test.jpg',
             ]);
 
-        
-
-      
-        
        for($i = 0; $i <count($tagarray); $i++) 
         {  
-            $post->tags()->attach($tagarray[$i]); 
+            $post->tags()->syncWithoutDetaching($tagarray[$i]); 
         } 
 
 

@@ -20,7 +20,6 @@
       <div class="x_content">
         <div class="dashboard-widget-content">
           {{$post->description}} 
-
           <hr>
 
           @if($post->tags)

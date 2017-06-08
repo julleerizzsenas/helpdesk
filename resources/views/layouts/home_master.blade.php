@@ -17,7 +17,7 @@
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav pull-right navbar-nav">
             <li><a href="#">Issue Tracker</a></li>
             <li><a href="#about">Helpdesk</a></li>
             <li><a href="#contact">About Us</a></li>
@@ -31,7 +31,7 @@
       
       <div class="bg-overlay bg-title text-center col-md-12 col-xs-12"><br><br>
         <div class="clearfix"></div>
-        <h1 class="upper deco col-md-12 col-xs-12">Knowledge Base</h1><br><br>
+        <h1 class="deco col-md-12 col-xs-12">Knowledge Base</h1><br>
         <h3>coreDev Solutions, Inc.</h3><br>
         <div class="center">
           @if(auth()->check())
