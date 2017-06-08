@@ -12,14 +12,14 @@
         <div class="row">
           {{-- <div class="col-md-6"> --}}
             <div class="profile_pic">
-              <img src="/images/person.png" class="img-circle profile_img">
-              <p> Gem Elaine H. Alob </p>
+              <a href="https://github.com/Gemstoneee"><img src="/images/person.png" class="img-circle profile_img"></a>
+              <p><small>Gemstone</small></p>
             {{-- </div> --}}
           </div>&nbsp;
           {{-- <div class="col-md-6"> --}}
             <div class="profile_pic">
-              <img src="/images/person.png" class="img-circle profile_img">
-              <p> Julleerizz Queen Lovestarr T. Senas </p>
+              <a href="https://github.com/julleerizzsenas"><img src="/images/person.png" class="img-circle profile_img"></a>
+              <p><small>JulieQueen Starr</small></p>
             {{-- </div> --}}
           </div>
         </div>

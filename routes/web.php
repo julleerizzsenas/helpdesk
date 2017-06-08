@@ -22,8 +22,10 @@ Route::get('create', 'PostsController@create');
 Route::post('store', 'PostsController@store');
 Route::post('posts/{post}/comments', 'CommentsController@store');
 Route::post('posts/{post}/comments/replies', 'ReplyController@store');
+Route::post('tags/{tag}', 'TagsController@show');
 
 
 Route::resource('posts', 'PostsController');
-Route::resource('posts/tags/{tag}', 'TagsController');
+Route::resource('tags', 'TagsController');
+//Route::resource('tags/{tag}', 'TagsController');
 Route::resource('posts/{id}', 'PostsController');

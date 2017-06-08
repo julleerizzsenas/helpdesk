@@ -18,21 +18,25 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
     <ul class="nav side-menu">
-      <li>
-        <a href="/dashboard">
-          <i class="fa fa-home"></i>Dashboard</a>
+        <li>
+          <a href="/dashboard">
+            <i class="fa fa-home"></i>Dashboard</a>
         </li>
         <li>
           <a href="/create">
             <i class="fa fa-edit"></i>Add Topic</a>
-          </li>
-{{-- <li>
-<a href="/topics">
-<i class="fa fa-file-text"></i>Topics</a>
-</li> --}}
-</ul>
+        </li>
+        <li>
+            <a href="/topics">
+              <i class="fa fa-file-text"></i>Topics</a>
+        </li>
+        <li>
+            <a href="/tags">
+              <i class="fa fa-tags"></i>Tags</a>
+        </li>
+    </ul>
+  </div>
 </div>
-</div>
-<!-- /sidebar menu -->
+      <!-- /sidebar menu -->
 
 

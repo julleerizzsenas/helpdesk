@@ -17,12 +17,12 @@
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav pull-right navbar-nav">
+          </b><ul class="nav pull-right navbar-nav">
             <li><a href="#">Issue Tracker</a></li>
             <li><a href="#about">Helpdesk</a></li>
             <li><a href="#contact">About Us</a></li>
             <li><a href="#contact">Contact Us</a></li>
-          </ul>
+          </ul></b>
           
         </div><!--/.nav-collapse -->
       </div>

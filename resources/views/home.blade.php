@@ -32,9 +32,9 @@
             <div class="x_title">
                 <h4><b>Tags</b></h4>
             </div>
-            <div class="x_content pull-left d">
+            <div class="x_content pull-left">
                 @foreach ($tags->slice(0, 5) as $tag)
-                    <a href="/posts/tags/{{ $tag->name }}">
+                    <a href="/tags/{{ $tag->name }}">
                         {{ $tag->name }}<hr>
                     </a>
                 @endforeach      

@@ -1,6 +1,6 @@
 <footer class="z">
 	<div class="pull-right">
-	<a href="https://coredev.ph">coreDev Solutions, Inc.</a> Knowledge Base
+	<p><a href="https://coredev.ph">coreDev Solutions, Inc. </a><b>Knowledge Base</b></p>
 	</div>
 	<div class="clearfix"></div>
 </footer>

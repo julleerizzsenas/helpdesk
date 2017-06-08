@@ -14,10 +14,10 @@ class TagsController extends Controller
      */
     public function index(Tag $tag)
     {
-        $posts = Tag::all();
-        $posts = $tag->posts;
+        $tags = Tag::distinct()->select('name')
+                ->get();
 
-        return view('pages.tags', compact('posts', 'tag'));
+        return view('pages.tags', compact('tags'));
     }
 
     /**
@@ -49,7 +49,10 @@ class TagsController extends Controller
      */
     public function show(Tag $tag)
     {
-        return view('layouts.tags', compact('tag'));
+        $posts = Tag::all();
+        $posts = $tag->posts;
+
+        return view('pages.tags_show', compact('posts', 'tag'));
     }
 
     /**
