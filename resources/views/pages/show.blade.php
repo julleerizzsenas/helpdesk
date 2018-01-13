@@ -27,7 +27,7 @@
             @foreach($post->tags as $key => $value)
             <i class="fa fa-tag"></i>
             <li class="menu li">
-              <a href="/posts/tags/{{ $value->name }}"><i class="green">
+              <a href="/tags/{{ $value->name }}"><i class="green">
               &nbsp;{{$value->name}}&nbsp;</i>
             </a>
           </li>

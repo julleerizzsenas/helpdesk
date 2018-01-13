@@ -2,9 +2,9 @@
 @section('title' , 'Home')
 
 @section('content')
-    <div class="col-md-9 dashboard_graph">
-        <div class="col-md-12">
-            <div class="x_panel">
+    <div class="col-md-8 dashboard_graph">
+        <div class="col-md-11 col-xs-11">
+            <div class="x_panel margin-graph">
                 @foreach ($posts as $post)
                   @include ('layouts.home_show')
                 @endforeach
@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>  
-    <div class="col-md-3 dashboard_graph">          
+    <div class="col-md-3 col-xs-12 dashboard_graph">          
     <div class="col-md-12 col-xs-6">
         <div class="x_panel">
             <div class="x_title">
@@ -34,7 +34,7 @@
             </div>
             <div class="x_content pull-left">
                 @foreach ($tags->slice(0, 5) as $tag)
-                    <a href="/tags/{{ $tag->name }}">
+                    <a href="/posts/{{ $post->id }}">
                         {{ $tag->name }}<hr>
                     </a>
                 @endforeach      

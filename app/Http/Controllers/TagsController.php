@@ -49,8 +49,10 @@ class TagsController extends Controller
      */
     public function show(Tag $tag)
     {
-        $posts = Tag::all();
+        //$posts = Tag::all();
         $posts = $tag->posts;
+
+        // dd($posts);
 
         return view('pages.tags_show', compact('posts', 'tag'));
     }

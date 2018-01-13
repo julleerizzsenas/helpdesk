@@ -13,7 +13,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-                <img style="max-width:100px;" class="brand" src="images/openbook.png" alt="logo" >
+                <img style="max-width:100px;" class="brand" src="/images/openbook.png" alt="logo" >
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">

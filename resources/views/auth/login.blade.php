@@ -50,8 +50,8 @@
                                 <div class="clearfix"></div>
                                 <br />
                                 <div>
-                                    <h3><i class="fa fa-paw"></i> Knowledge Base</h3>
-                                    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                                    <h3><i class="fa fa-book"></i> Knowledge Base</h3>
+                                    <p>©2017 All Rights Reserved. coreDev Solutions, Inc.</p>
                                 </div>
                             </div>
                         </div>

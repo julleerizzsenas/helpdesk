@@ -17,6 +17,7 @@
                     <div class="block">
                         <div class="block_content">
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;{{ str_limit($post->description, $limit = 300, $end = ' ...') }}
+                             <b><i>Read more</i></b>
                                 <p class="pull-right"> Date Published: <i class="green">{{ $post->updated_at->toFormattedDateString() }}</i>
                                 </p>
                             </p>
